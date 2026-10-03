@@ -91,14 +91,17 @@ Can it satisfy our PIT contract?   ← rows 6, 11, 12, 15, 20 first
 |---|-------------|------|-----|-----------|---------|-----|-------|
 | 6 | CA announcement / availability timing (`available_at`) | PARTIAL / UNKNOWN | PARTIAL / UNKNOWN | UNKNOWN / PARTIAL | UNKNOWN | PARTIAL | UNKNOWN |
 | 11 | Historical revisions (original + restatement) | PASS-candidate | PASS-candidate† | PARTIAL → investigate | PASS-candidate‖ | UNKNOWN | UNKNOWN |
-| 12 | Filing/publication → `reported_at` / feed `available_at` | PARTIAL | PARTIAL (strong model)‡ | PARTIAL → investigate | PARTIAL (strong model)‖ | PARTIAL / UNKNOWN | PARTIAL / UNKNOWN |
+| 12 | Filing/publication → `reported_at` / feed `available_at` | PARTIAL | PARTIAL (strong model)‡ | PARTIAL → investigate | PARTIAL (strong model)‖ | PARTIAL (strong)¶ | PARTIAL / UNKNOWN |
 | 15 | Event historical `available_at` / calendar knowability | UNKNOWN | PARTIAL → investigate§ | UNKNOWN / PARTIAL | UNKNOWN / PARTIAL | UNKNOWN | UNKNOWN |
-| 20 | License permits intended personal research + local store | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN — contractual | UNKNOWN |
+| 20 | License permits intended personal research + local store | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN — contractual# | PASS-candidate** |
 
 † Compustat marketplace: PIT changes since 1987, but “alongside change date in **North America only**” — India Snapshot depth must be confirmed; do not treat as PASS.  
 ‡ Capital IQ Financials publicly documents **FilingDate** and **Financial Instance Date** (first delivered) — dual-timestamp model maps well to our ladder; India sample still required.  
 § Global Events dataset claims **Point in Time history from August 2018** — better public signal than LSEG on knowability, still not India-proven PASS.  
-‖ FactSet Fundamentals PIT: Asia-Pacific coverage from 1999; API `/point-in-time` + `/periods` (first published / superseded, UTC); NON-RESTATED vs RESTATED — India eight-name sample still required for PASS.
+‖ FactSet Fundamentals PIT: Asia-Pacific coverage from 1999; API `/point-in-time` + `/periods` (first published / superseded, UTC); NON-RESTATED vs RESTATED — India eight-name sample still required for PASS.  
+¶ NSE filings UI exposes Broadcast / Exchange Received / Exchange Dissemination times (incl. revised submissions) — exchange temporal trail, not yet mapped for eight names → not PASS.  
+# NSE: research/non-commercial recognized, but Market Data online-only; offline/removable media needs prior approval — do not infer local-store PASS.  
+** EODHD public terms: non-professional users may store/manipulate/analyze for private non-commercial use (no redistribute) — still tie to exact subscription before PASS.
 
 ### Evidence notes (critical rows)
 
@@ -167,59 +170,76 @@ Sources (public): [LSEG PIT / backtest](https://www.lseg.com/en/data-analytics/a
 
 **Important:** FactSet Estimates PIT ≠ statement PIT. Only Fundamentals / As-Reported / Fundamentals PIT count toward row 11.
 
-#### NSE Data & Analytics / NSE Indices
-- **Domain role:** Strong **candidate for market / CA / index**, not presumed sole fundamentals/events source.
-- **1–5 / 18–19:** Potentially strong — paid [EOD/historical](https://www.nseindia.com/static/market-data/eod-historical-data-subscription), [corporate data / EOD corporate announcement](https://www.nseindia.com/static/market-data/corporate-data-subscription), index products via NSE Indices (verify Nifty **price index** series separately).
-- **6 PARTIAL:** Corporate-action reports include ex-date / related fields; announcement vs feed `available_at` not established as our field.
-- **11 UNKNOWN** for originally-reported vs restated PIT statement store.
-- **12 PARTIAL/UNKNOWN**
-- **15 UNKNOWN**
-- **20 UNKNOWN — contractual:** [NSE Data Sharing & Usage Policy](https://www.nseindia.com/static/market-data/nse-data-policy) states subscribers execute a Relevant Agreement for intended use/handling; offline modes (removable media etc.) not permitted without prior MD & CEO approval; data normally online via designated servers. **Do not infer local canonical store rights.**
+#### NSE Data & Analytics / NSE Indices — public-doc pass (2026-10-03); **no critical row → PASS**
 
-#### EODHD (control)
-- Useful to show where ordinary APIs stop.
-- Public docs: EOD prices, fundamentals with `filing_date`, earnings history with `reportDate`, calendars. Sources: [Fundamentals API](https://eodhd.com/financial-apis/stock-etfs-fundamental-data-feeds), [glossary](https://eodhd.com/financial-academy/financial-faq/fundamentals-glossary-common-stock), [earnings calendar](https://eodhd.com/financial-apis/calendar-upcoming-earnings-ipos-and-splits).
-- **11 UNKNOWN** — no public evidence of full original+restatement PIT retrieval for our model.
-- **12 PARTIAL/UNKNOWN** — `filing_date` / `reportDate` exist; not dual issuer vs feed availability with revision chain.
-- **15 UNKNOWN** — historical earnings dates ≠ historical calendar knowability.
-- **Not suitable as sole fundamentals/events source** unless vendor proves otherwise.
-- Still forbidden as a path that depends on Yahoo scrapers; treat as its own licensed API only if later used for non-canonical experiments — **not** as V1 canonical store without matrix PASS.
+| Row | Cell | What public evidence establishes | What remains missing |
+|-----|------|----------------------------------|----------------------|
+| 6 | PARTIAL | CA reports with ex-dates/related dates; filings UI distinguishes corporate announcements vs corporate actions | Historical feed-availability ≠ announcement/ex for as_of reconstruct |
+| 11 | UNKNOWN | No public original-vs-restated PIT financial-statement store | Fundamentals domain → not NSE’s role |
+| 12 | PARTIAL (strong) | Filings expose **Broadcast Date/Time**, **Exchange Received Time**, **Exchange Dissemination Time** (incl. revised submissions) — real exchange temporal trail, not a generic `date` | Exact canonical map to `reported_at` / `available_at` for eight names + history |
+| 15 | UNKNOWN | Announcement timestamps ≠ historical earnings-calendar knowledge-state feed | Row-15 bottleneck remains |
+| 20 | UNKNOWN — contractual | Researchers/non-commercial recognized; Market Data **online**; offline/removable media needs prior approval ([NSE data policy](https://www.nseindia.com/static/market-data/nse-data-policy)) | Explicit local historical extract rights in Relevant Agreement |
+
+**Broader / architecture (NSE):**
+
+| Topic | Stance |
+|-------|--------|
+| Market EOD / CM | Strong candidate — [EOD/historical](https://www.nseindia.com/static/market-data/eod-historical-data-subscription); securities master, CA report, settlement calendar in market-data reports |
+| Nifty 50 | **Price Return** vs Total Return distinguished; Nifty 50 factsheet reports both — aligns with frozen `NIFTY50_PRICE_INDEX` (not TRI) via [Nifty Indices](https://www.niftyindices.com/) materials |
+| Sessions | Settlement calendar supports India session authority (map to `SessionCalendar`) |
+| Domain role | Market (+ index) + partial CA timestamps; **not** sole fundamentals/events |
+
+#### EODHD (control) — public-doc pass (2026-10-03); **no critical row → PASS**
+
+| Row | Cell | What public evidence establishes | What remains missing |
+|-----|------|----------------------------------|----------------------|
+| 6 | UNKNOWN | Split API: effective/ex-split dates + ratios; NSE supported | Historical vendor `available_at` / knowledge-state |
+| 11 | UNKNOWN | Financials present; no original+restated PIT retrieval | Control failure mode for sole fundamentals |
+| 12 | PARTIAL / UNKNOWN | `filing_date` on statements; `reportDate` on earnings | Dual issuer/feed revision chain |
+| 15 | UNKNOWN | Historical earnings/split calendars | Calendar knowability at `as_of` |
+| 20 | PASS-candidate | Terms: non-professional users may **store, manipulate, analyze** for private non-commercial use; no redistribute ([EODHD](https://eodhd.com/)) | Tie exact subscription to eight-name India extract before PASS |
+
+**Control lesson:** historical data ✅ · historical events ✅ · filing/report dates ✅ · **PIT knowledge state ❌** — exactly what the audit must catch. Not a sole fundamentals/events source; not a Yahoo-scraper path.
 
 ---
 
-## Domain suitability sketch (evidence so far — all provisional)
+## Domain suitability sketch (after full six-candidate public pass)
 
 ```
-PIT fundamentals (converging — still PASS=0)
-────────────────────────────────────────────
-LSEG       PASS-candidate
-S&P        PASS-candidate (†India PIT caveat)
-Bloomberg  PARTIAL → investigate
-FactSet    PASS-candidate (Asia-Pac PIT since 1999)
-
-Historical knowledge-state: CA available_at / event knowability
-──────────────────────────────────────────────────────────────
-Still largely unresolved publicly across all four full-stack vendors
-(S&P Global Events PIT from Aug 2018 = best public events signal so far)
-
-                    Market   CA           Fundamentals      Events              License
-LSEG                  ?    promising†     PASS-cand*        knowability gap     UNKNOWN
-S&P                weak?   partial        PASS-cand*††      PARTIAL→invest§    UNKNOWN
-Bloomberg             ?    UNKNOWN/PART   PARTIAL→invest    UNKNOWN/PARTIAL     UNKNOWN
-FactSet               ?    UNKNOWN        PASS-cand*‖       UNKNOWN/PARTIAL     UNKNOWN
-NSE                strong?  partial       weak/?            ?                   UNKNOWN
-EODHD              control  weak          FAIL-as-sole      weak                ?
+                    Market      CA         Fundamentals      Events           License
+LSEG                  ?          ?           strong            ?              UNKNOWN
+S&P                   ?          ?           strong            ?§             UNKNOWN
+Bloomberg             ?          ?           investigate       ?              UNKNOWN
+FactSet               ?          ?           strong            ?              UNKNOWN
+NSE                 strong     partial       weak/?            ?         UNKNOWN (offline)
+EODHD               control    control       weak              weak      PASS-candidate**
 ```
 
-\*PASS-candidate on public docs only; India sample required.  
-†CA: announcement/ex/factor/deltas documented; row-6 feed `available_at` still open.  
-††India Compustat PIT change-date caveat.  
-§Global Events PIT from Aug 2018 claimed — not PASS.  
-‖Do not count Estimates PIT.
+**Convergence:**
+- **Fundamentals deeper validation:** LSEG · S&P · FactSet (Bloomberg still investigate)  
+- **Market / India exchange:** NSE increasingly useful (EOD + Price Return Nifty + filing timestamps)  
+- **Historical event knowledge (row 15):** hardest unresolved domain — **next audit focus**  
+- **License:** premium vendors UNKNOWN; NSE offline constraint; EODHD terms unusually clear for private store  
 
 **Insight:** Obtaining historical *values* may be easier than obtaining historical *information-state* metadata. Temporal ladder stays untouched.
 
 **Mapping rule:** A market vendor need not pass row 11; a fundamentals vendor need not supply Nifty. Domain split is first-class.
+
+### Next priority — stop broad vendor searching; focused Row 15
+
+Broad Track 1 public passes for the six candidates are **complete enough**. Do not endlessly re-read generic docs.
+
+**Focused investigation:** Does any candidate support **historical calendar-state reconstruction** (knowability), not merely historical earnings dates?
+
+Possible outcomes (do **not** choose C prematurely):
+
+| Outcome | Meaning |
+|---------|---------|
+| A | One vendor genuinely supports row 15 → use it for Events |
+| B | Special historical events dataset → domain-split Events source |
+| C | Nobody can provide it → revise Event-domain requirements **before** implementation |
+
+Primary row-15 leads: S&P Global Events (PIT from Aug 2018), then LSEG / Bloomberg / FactSet event products with the exact T1 UNKNOWN → T2 KNOWN ask.
 
 ---
 
@@ -281,7 +301,7 @@ Does the proposed subscription permit a private researcher to retain a local his
 
 Order reflects PIT-research plausibility + India-native domain role — **not** a quality ranking.
 
-**Do not pay** and **do not start adapters** until **vendor-to-domain mapping** is justified: for each assigned domain, that source’s critical rows for that domain have evidence (sample and/or contract where required). Silence from LSEG does **not** pause S&P/Bloomberg/FactSet public audit.
+**Do not pay** and **do not start adapters** until **vendor-to-domain mapping** is justified: for each assigned domain, that source’s critical rows for that domain have evidence (sample and/or contract where required). Broad six-candidate public pass is done; **next research is focused Row 15**, not more generic vendor surfing.
 
 ---
 
@@ -352,25 +372,34 @@ For each claim that might move a matrix cell, record a row. Sales “yes we supp
 | 2026-10-03 | FactSet | 6 | No public CA feed-availability proof | — | — | unknown | no | no | no | **6 stays UNKNOWN** |
 | 2026-10-03 | FactSet | 15 | Calendar products exist; knowability unproven | public_doc | FactSet suite (calendar/events) | unknown | no | no | no | **15 stays UNKNOWN/PARTIAL** |
 | 2026-10-03 | FactSet | 20 | DataFeed can store locally (technical); ToS restrict redistribute | public_doc | DataFeed Loader guide; FactSet ToU samples | unknown | n/a | no | no | **20 stays UNKNOWN** |
+| 2026-10-03 | NSE | 6 | CA reports / ex-dates; announcements vs actions distinguished | public_doc | NSE market-data / CA reports; filings UI | yes | no | no | no | **6 stays PARTIAL** |
+| 2026-10-03 | NSE | 11 | No PIT statement revision store in public materials | public_doc | — | yes | no | no | no | **11 stays UNKNOWN** |
+| 2026-10-03 | NSE | 12 | Broadcast / Exchange Received / Dissemination timestamps on filings (incl. revised) | public_doc | NSE corporate filings interface | yes | partial (strong exchange trail) | no | no | **12 → PARTIAL (strong)** |
+| 2026-10-03 | NSE | 15 | Announcement timestamps ≠ earnings calendar knowability | public_doc | NSE filings / announcements | yes | no | no | no | **15 stays UNKNOWN** |
+| 2026-10-03 | NSE | 20 | Online Market Data; offline modes need prior approval | public_doc / contract_clause | NSE Data Sharing & Usage Policy | yes | n/a | no | no | **20 stays UNKNOWN — contractual** |
+| 2026-10-03 | NSE | 3 | Nifty 50 Price Return vs TRI distinguished | public_doc | Nifty Indices Nifty 50 factsheet | yes | n/a | no | n/a | Supports frozen price-index benchmark |
+| 2026-10-03 | EODHD | 6 | Split dates/ratios; no feed available_at | public_doc | EODHD split / CA API docs | yes (NSE supported) | no | no | no | **6 stays UNKNOWN** |
+| 2026-10-03 | EODHD | 11 | No original+restated PIT | public_doc | EODHD fundamentals docs | unknown | no | no | no | **11 stays UNKNOWN** |
+| 2026-10-03 | EODHD | 12 | filing_date / reportDate exist | public_doc | EODHD fundamentals / earnings docs | unknown | partial | no | no | **12 stays PARTIAL/UNKNOWN** |
+| 2026-10-03 | EODHD | 15 | Historical earnings dates ≠ knowability | public_doc | EODHD calendar docs | unknown | no | no | no | **15 stays UNKNOWN** |
+| 2026-10-03 | EODHD | 20 | Non-pro ToS: store/manipulate/analyze private non-commercial | contract_clause | EODHD terms | unknown | n/a | no | partial | **20 UNKNOWN → PASS-candidate** |
 
 Do not send credentials/API keys/confidential contracts into chat — sanitized sample + clause wording only.
 
-### Critical-row summary (after LSEG + S&P + Bloomberg + FactSet)
+### Critical-row summary (all six candidates — public pass complete)
 
 ```
-           LSEG              S&P                 Bloomberg           FactSet
-6          PARTIAL/UNKNOWN   PARTIAL/UNKNOWN     UNKNOWN/PARTIAL     UNKNOWN
-11         PASS-candidate    PASS-candidate†     PARTIAL→invest      PASS-candidate
-12         PARTIAL           PARTIAL (strong)    PARTIAL→invest      PARTIAL (strong)
-15         UNKNOWN           PARTIAL→invest§     UNKNOWN/PARTIAL     UNKNOWN/PARTIAL
-20         UNKNOWN           UNKNOWN             UNKNOWN             UNKNOWN
+           LSEG              S&P                 Bloomberg           FactSet            NSE                EODHD
+6          PARTIAL/UNKNOWN   PARTIAL/UNKNOWN     UNKNOWN/PARTIAL     UNKNOWN            PARTIAL            UNKNOWN
+11         PASS-candidate    PASS-candidate†     PARTIAL→invest      PASS-candidate     UNKNOWN            UNKNOWN
+12         PARTIAL           PARTIAL (strong)    PARTIAL→invest      PARTIAL (strong)   PARTIAL (strong)   PARTIAL/UNKNOWN
+15         UNKNOWN           PARTIAL→invest§     UNKNOWN/PARTIAL     UNKNOWN/PARTIAL    UNKNOWN            UNKNOWN
+20         UNKNOWN           UNKNOWN             UNKNOWN             UNKNOWN            UNKNOWN (offline)  PASS-candidate
 
 PASS (any vendor, critical)     0
-PIT fundamentals PASS-candidate: LSEG, S&P, FactSet (Bloomberg still investigate)
-Knowledge-state CA/events: still the open problem
 ```
 
-**Next Track 1:** NSE (market / CA / Nifty / sessions / license), then EODHD control.
+**Next:** Focused **Row 15** investigation (calendar knowability), not more broad vendor docs.
 
 ---
 
@@ -384,7 +413,8 @@ Knowledge-state CA/events: still the open problem
 | 2026-10-03 | Process reframed: architecture fixed; **vendor-to-domain mapping** is the evidence gate | Parallel Track 1 + Track 2 |
 | 2026-10-03 | S&P public-doc pass; row 15 → PARTIAL→investigate | Dual FilingDate/InstanceDate; India Compustat PIT caveat |
 | 2026-10-03 | Bloomberg public-doc pass; no cell → PASS | Pattern: PIT fundamentals promising; CA/event knowability unresolved |
-| 2026-10-03 | FactSet public-doc pass; row 11 → PASS-candidate | APAC PIT since 1999; Estimates PIT excluded; next NSE |
+| 2026-10-03 | FactSet public-doc pass; row 11 → PASS-candidate | APAC PIT since 1999; Estimates PIT excluded |
+| 2026-10-03 | NSE + EODHD public passes; six-candidate Track 1 complete | NSE 12 PARTIAL(strong); EODHD 20 PASS-candidate; **next = focused Row 15** |
 
 ## Next engineering gate (still future)
 
