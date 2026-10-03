@@ -3,8 +3,15 @@ import { readFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createSessionCalendar } from "./session-calendar.mjs";
-import { researchAdjustedClose, sessionTradedValueInr } from "./prices.mjs";
+import {
+  researchAdjustedClose,
+  selectCorporateActionsAsOf,
+  sessionTradedValueInr,
+} from "./prices.mjs";
 import { assertValid } from "./schema-validate.mjs";
+
+/** Re-export for pit-store API parity with statements/events selectors. */
+export { selectCorporateActionsAsOf };
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_FIXTURE_ROOT = join(__dirname, "../../data/fixtures");
@@ -153,7 +160,7 @@ export function createPitStore(dataset = loadFixtureDataset()) {
     );
     const statements = selectStatementsAsOf(bundle.statements, asOfIso);
     const events = selectEventsAsOf(bundle.events, asOfIso);
-    const cas = bundle.corporate_actions.filter((c) => c.available_at <= asOfIso);
+    const cas = selectCorporateActionsAsOf(bundle.corporate_actions, asOfIso);
 
     // Hash only records used by this assessment (not the whole fixture DB).
     // Market lookbacks need ≤61 closes; liquidity uses last 20 sessions;

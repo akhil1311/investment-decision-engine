@@ -161,35 +161,55 @@ Must reproduce what was known **before** an earnings announcement (`available_at
 - Session calendar must be an explicit input to the store (same role as V1 `SessionCalendar`)
 - Missing sessions, holidays, and special closes must be represented without inventing bars
 
-## Adapter contract (design constraint — implement later)
+## Adapter contract (vendor-neutral)
 
 ```
-Synthetic fixture  →  canonical schema  →  existing engines
-Real vendor        →  adapter           →  same canonical schema  →  same engines
+Vendor extract (any source)
+        ↓
+Adapter (vendor-specific later; contract is shared)
+        ↓
+Canonical PIT emission  →  validate-pit-store  →  createPitStore
+        ↓
+replay(as_of) → loadAsOf(as_of) → assess() → V1 engines
 ```
 
-Acceptance for an adapter (future phase):
+Implemented by `src/lib/adapter-contract.mjs` / `test/invariants/adapter-contract.test.mjs`.
 
-1. Emits only schema-valid records (validator rejects before engines).
-2. Round-trip or golden: for a sealed vendor extract, `data_version` is deterministic for fixed `(security_id, as_of)`.
-3. Engines and `assembleAssessment` / `runDecisionGate` are **unmodified** from `v0.1.0` aside from store wiring (load path), unless a later tagged release explicitly changes contracts.
+Any future adapter (S&P, LSEG, NSE, FactSet, …) must produce the **same** emission shape. The contract names no vendor SKUs.
+
+The contract defines **shape and gate**, not permission to weaken frozen temporal semantics. Adapters must not invent `available_at` from a weaker vendor approximation, or collapse:
+
+```
+announcement ≠ reported_at ≠ vendor delivery/availability ≠ knowledge state at as_of
+```
+
+Acceptance:
+
+1. Emits only schema-valid canonical records (no generic `date`; no reshaping frozen schemas for vendor fields).
+2. Emission passes `validatePitStore` before store/engines see it.
+3. For fixed `(security_id, as_of)`, `data_version` is deterministic once loaded into the PIT store.
+4. Engines / `assembleAssessment` / `runDecisionGate` remain unmodified from `v0.1.0`.
+5. Domain assignment comes from evidence-driven mapping ([VENDOR_DOMAIN_MAPPING.md](VENDOR_DOMAIN_MAPPING.md)) — not from which adapter is easiest to code.
 
 ## Planned engineering phases (after this freeze)
 
+Vendor evidence (Track 1/2 audit, S&P sample) runs **in parallel** and does not block vendor-neutral infrastructure.
+
 | Phase | Deliverable | Gate |
 |-------|-------------|------|
-| 1 | This doc + [VENDOR_AUDIT_MATRIX](VENDOR_AUDIT_MATRIX.md) | **Current** |
-| 2 | Vendor-to-domain mapping justified by evidence ([VENDOR_AUDIT_LIVE.md](VENDOR_AUDIT_LIVE.md); domain split allowed) | No adapter until mapping justified; silence from one vendor does not pause others |
-| 3 | Adapter(s) emitting canonical JSON for eight names + Nifty (limited window) | Schema + PIT validator green |
-| 4 | `validate-pit-store` (or equivalent) rejects listed failure modes | Bad vendor data never reaches engines |
-| 5 | Historical assessment replay for sample `as_of` pairs | Deterministic cards + `data_version` |
-| 6 | Replay harness (`npm run replay -- --symbol … --start … --end …`) | Research dataset of assessments, gate still closed |
+| 1 | This doc + [VENDOR_AUDIT_MATRIX](VENDOR_AUDIT_MATRIX.md) / [VENDOR_AUDIT_LIVE.md](VENDOR_AUDIT_LIVE.md) | Audit freeze ✅ |
+| 2 | **`validate-pit-store`** — vendor-neutral firewall on canonical fixtures | `npm run validate:pit-store` green (`research_fixture`); Layer A/B rejection modes covered ✅ |
+| 3 | **Replay harness** (`replay(as_of)` → `loadAsOf(as_of)` → `assess()` → V1 engines) | Fixture T1/T2 knowledge-state replay; deterministic; gate `DISABLED` — **PASS** ✅ |
+| 4 | **Adapter contract** (vendor-neutral; no vendor SKUs) | Contract tests green; defines emission shape before any vendor adapter ✅ |
+| 5 | **Vendor-to-domain mapping** (evidence-driven; [VENDOR_DOMAIN_MAPPING.md](VENDOR_DOMAIN_MAPPING.md)) | Framework PASS; SELECTED gate explicit; adapters only after SELECTED; Row 15 PASS-candidate until sample |
+| 6 | Adapter(s) emitting canonical JSON for eight names + Nifty (limited window) | Schema + `validate-pit-store` green on real extracts |
+| 7 | Historical assessment replay on real extracts | Research dataset of assessments, gate still closed |
 
-Only after phase 6 is trustworthy: open Track B with a **new** research spec (e.g. `docs/research/DECISION_RESEARCH_001.md`), new splits/holdout — do not retune V1 thresholds on the eight names.
+Only after phase 7 is trustworthy: open Track B with a **new** research spec (e.g. `docs/research/DECISION_RESEARCH_001.md`), new splits/holdout — do not retune V1 thresholds on the eight names.
 
-## PIT store validator — required rejection modes (future)
+## PIT store validator — required rejection modes
 
-Before real data may drive assessments, a validator must reject at least:
+Implemented by `src/lib/validate-pit-store.mjs` / `npm run validate:pit-store` (profiles: `research_fixture` default, `canonical_production` strict). Before real data may drive assessments, the validator must reject at least:
 
 - `available_at` after the assessment `as_of` leaking into inputs  
 - Missing / wrong timezone on EOD timestamps  
@@ -205,14 +225,17 @@ Before real data may drive assessments, a validator must reject at least:
 
 Philosophy unchanged from V1: incomplete or conflicting CA data **fails loud**.
 
-## Historical replay — success criteria (future)
+## Historical replay — success criteria
+
+Implemented by `src/lib/replay.mjs` / `npm run replay` (fixture store → existing `assess()`; no vendor adapters).
 
 For a security and session range:
 
 1. For each completed session `as_of`, `assess()` returns schema-shaped JSON with `decision.state === "DISABLED"`.
-2. Consecutive sessions may change evidence only when PIT visibility changes (new bar, newly available statement/event/CA).
-3. Re-running the same range yields identical `context.data_version` and identical evidence/assessment payloads.
-4. Unrelated security mutations do not change another security’s `data_version`.
+2. T1/T2 PIT boundaries (e.g. statement revision) produce **different** `context.data_version` and evidence/assessment knowledge state.
+3. Re-running the same range yields identical serialized replay report (deterministic).
+4. Fail-loud data-quality errors (e.g. unsupported CA) surface as replay failures — never silent success.
+5. Unrelated security mutations do not change another security’s `data_version` (existing store invariant; still required for vendor extracts later).
 
 ## Licensing and personal use
 

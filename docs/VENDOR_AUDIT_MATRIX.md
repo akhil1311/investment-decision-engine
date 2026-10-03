@@ -154,4 +154,8 @@ Record the go / no-go here when the matrix is complete:
 | 2026-10-03 | Row 15 focused: S&P → PASS-candidate; do not weaken row 15 | S&P (+ EventVestor / WSH / Aiera side board) | Global Events delivery-date PIT; India sample next; PASS still 0; no adapter/engine change |
 | 2026-10-03 | Track 1 public research clean stop | — | Next: S&P India sample → evidence-log → Row 15 decision; map delivery to EOD `available_at` without unsupported timing assumptions; no more broad vendor search |
 | 2026-10-03 | Milestone locked; wait for S&P sample | S&P Global Events | No further public surfing / no v0.1.0 changes; mechanical Row 15 eval only when sample arrives; PASS = 0; **do not move matrix cells until evidence arrives** |
+| 2026-10-03 | Vendor-neutral validate-pit-store on fixtures | — | Track A eng proceeds in parallel with S&P sample; Row 15 unchanged; PASS = 0 |
+| 2026-10-03 | Replay milestone PASS; adapter contract next | — | Dependency order documented; vendor-neutral adapter contract defines emission before any vendor adapter |
+| 2026-10-03 | Evidence-driven domain mapping opened | Provisional M/F/E/C | See VENDOR_DOMAIN_MAPPING.md; map evidence first; adapters deferred; Row 15 unchanged |
+| 2026-10-03 | Domain-mapping framework PASS; SELECTED gate explicit | — | Per-domain evidence cards; no silent promotion to SELECTED; adapters still deferred |
 | | | | |

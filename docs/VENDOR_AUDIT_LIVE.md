@@ -273,19 +273,21 @@ Do **not** choose C. Do **not** revise Event-domain requirements yet.
 ### Track 1 public research — clean stop
 
 ```
-V1 engine                  🔒 frozen v0.1.0
-Track A requirements       🔒 frozen
-Vendor methodology         🔒 frozen
-Public vendor audit        ✅ complete
+V1 engine                  🔒 frozen v0.1.0          ✅
+Vendor audit framework     ✅ PASS / ongoing evidence
+PIT validator              ✅ PASS
+Historical replay          ✅ PASS
+Adapter contract           ✅ PASS
+Vendor/domain mapping      ▶ NEXT — VENDOR_DOMAIN_MAPPING.md
 Critical PASS              0
 
-S&P Row 15                 PASS-candidate
-S&P India sample           ⏳ next evidence
-Adapter / schema / engine  ❌
-Purchase / decision gate   ❌ / 🔒
+S&P Row 15                 PASS-candidate (unchanged)
+S&P India sample           ⏳ evidence for Row 15 / Source E
+Vendor adapters            ❌ deferred until domain SELECTED
+Decision gate              🔒 DISABLED
 ```
 
-**Do not** start another broad vendor-search cycle. Next meaningful artifact is the S&P sample → evidence-log update → Row 15 decision.
+**Do not** start another broad vendor-search cycle. Mapping is evidence→domain; adapters only after SELECTED. Row 15 sample remains the Events blocker.
 
 ### Next milestone — S&P Global Events India sample
 
@@ -551,6 +553,12 @@ PASS (any vendor, critical)     0
 | 2026-10-03 | Row 15 focused pass: S&P Global Events → **PASS-candidate** | Delivery-date PIT (Aug 2018+); C no longer working assumption; specialists noted; **next = India sample**; engines/specs unchanged |
 | 2026-10-03 | Track 1 public research **clean stop** | Next milestone wording: map delivery → frozen EOD `available_at` without unsupported timing assumptions; five sample proofs; date-only ≠ true 15:30; mechanical audit vs frozen criteria |
 | 2026-10-03 | Milestone **locked**; no further public-vendor surfing until evidence | Chain: India → revisions → delivery/availability → T1/T2 replay → EOD `available_at` map → PASS/PARTIAL/UNKNOWN. Next input = S&P sample only. v0.1.0 / engines / specs unchanged. PASS = 0. **Do not move any matrix cell** (incl. S&P row 15 PASS-candidate) until that evidence arrives |
+| 2026-10-03 | Track A eng: vendor-neutral **`validate-pit-store`** | Firewall on fixtures (Layer A/B); parallel to S&P sample. Engines/schemas/gate untouched. Row 15 cell still frozen. PASS = 0 |
+| 2026-10-03 | Track A eng: vendor-neutral **`replay`** harness | Dependency order: `replay` → `loadAsOf` → `assess` → engines. Fixture T1/T2 integrity. **Replay milestone PASS**. Row 15 frozen. Critical PASS = 0 |
+| 2026-10-03 | Track A eng: vendor-neutral **adapter contract** | Shared emission shape + tests; no S&P/LSEG/NSE adapter yet. Row 15 frozen. Critical PASS = 0 |
+| 2026-10-03 | Open **evidence-driven domain mapping** | See [VENDOR_DOMAIN_MAPPING.md](VENDOR_DOMAIN_MAPPING.md): M=NSE (proposed), F=shortlist, E=S&P Events (blocked on sample), C=OPEN. No adapters. Temporal ladder intact. Row 15 PASS-candidate. Critical PASS = 0 |
+| 2026-10-03 | Domain-mapping **framework PASS**; selection not made | Explicit SELECTED gate + per-domain evidence cards; PROPOSED≠SELECTED; zero UNKNOWN on critical rows required for SELECTED |
+| 2026-10-03 | **Hold** — next event is evidence, not code | E/F/C/license streams only; selection OPEN; adapters prohibited; no further architecture |
 
 ## Next engineering gate (still future)
 

@@ -26,6 +26,9 @@ Only `src/lib/decision-gate.mjs` may write `decision` / `confidence`. Engines ne
 
 ```bash
 npm test          # full suite (offline)
+npm run validate:pit-store   # vendor-neutral PIT store firewall (fixtures)
+npm run replay -- --symbol RELIANCE --start 2025-06-02 --end 2025-07-14 --summary
+# Track A: validate-pit-store → replay → adapter-contract tests (see docs/DATA_PROMOTION_V1.md)
 npm start         # http://127.0.0.1:8787
 npm run assess -- --symbol RELIANCE --position NOT_HELD
 npm run fixtures:generate   # rebuild data/fixtures (manual; not used by tests)
@@ -56,6 +59,7 @@ Work on branch `data-promotion-v1`. Do not rewrite engines for a vendor.
 | [docs/DATA_PROMOTION_V1.md](docs/DATA_PROMOTION_V1.md) | What “real-data compatible” means; phased plan |
 | [docs/VENDOR_AUDIT_MATRIX.md](docs/VENDOR_AUDIT_MATRIX.md) | Pass/Fail worksheet before any adapter code |
 | [docs/VENDOR_AUDIT_LIVE.md](docs/VENDOR_AUDIT_LIVE.md) | Live audit marks + vendor questionnaire (no coding yet) |
+| [docs/VENDOR_DOMAIN_MAPPING.md](docs/VENDOR_DOMAIN_MAPPING.md) | Evidence-driven M/C/F/E mapping; adapters only after SELECTED |
 
 Machine-readable thresholds and schemas live under `config/` (label specs, decision vocabulary, data-contract). Prefer those for exact numbers; prefer the docs above for intent and wiring.
 

@@ -10,7 +10,9 @@
     "test": "node --test test/**/*.test.mjs",
     "start": "node src/server.mjs",
     "assess": "node src/cli-assess.mjs",
-    "fixtures:generate": "node scripts/generate-fixtures.mjs"
+    "fixtures:generate": "node scripts/generate-fixtures.mjs",
+    "validate:pit-store": "node scripts/validate-pit-store.mjs",
+    "replay": "node scripts/replay.mjs"
   },
   "private": true
 }

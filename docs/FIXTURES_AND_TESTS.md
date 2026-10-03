@@ -67,6 +67,55 @@ test/
 
 Run: `npm test` (Node 20+ built-in test runner).
 
+### PIT store validator (Track A firewall)
+
+```bash
+npm run validate:pit-store
+# optional:
+npm run validate:pit-store -- --profile canonical_production
+```
+
+| Profile | Behavior |
+|---------|----------|
+| `research_fixture` (default) | Current `data/fixtures` must pass — including adversarial `SYN_*` packs |
+| `canonical_production` | Stricter: unsupported CA types are rejected at store level (intentional `SYN_UNSUPPORTED_CA` fails) |
+
+- Library: `src/lib/validate-pit-store.mjs` (pure; collect-all; deterministic error order)
+- Layer A = static integrity; Layer B = as-of PIT probes (bars **and** benchmarks included)
+- `date_only` + EOD `T15:30:00+05:30` is normalization, not true intraday availability
+- Not wired into `loadFixtureDataset` / engines yet (additive)
+- Tests: `test/invariants/pit-store-validator.test.mjs`
+
+### Historical replay harness (Track A)
+
+```bash
+npm run replay -- --symbol RELIANCE --start 2025-06-02 --end 2025-07-14 --summary
+npm run replay -- --symbol RELIANCE --as_of 2025-07-14T15:30:00+05:30
+```
+
+- Library: `src/lib/replay.mjs` — dependency order: `replay(as_of)` → `loadAsOf(as_of)` → `assess()` → V1 engines
+- Fixture-backed and vendor-neutral; engines/schemas unchanged
+- Proves T1/T2 knowledge-state differences (`data_version` + evidence) before any vendor extract
+- Milestone status: **PASS** (fixture replay integrity)
+- Tests: `test/invariants/replay.test.mjs`
+
+### Adapter contract (Track A, vendor-neutral)
+
+- Library: `src/lib/adapter-contract.mjs` — shared **AdapterEmission** shape + `assertAdapterEmission`
+- Any future vendor adapter must emit this shape; contract names **no** vendor SKUs
+- Gate: shape checks → `validatePitStore` → `emissionToDataset` / `createPitStore`
+- Identity projection from fixtures proves the contract without implementing S&P/LSEG/NSE adapters
+- Tests: `test/invariants/adapter-contract.test.mjs`
+
+Protection stack before real vendor extracts:
+
+```
+vendor data → [future adapter] → canonical PIT
+  → validate-pit-store ✅ → historical replay ✅ → V1 assess ✅ → gate DISABLED ✅
+```
+
+Domain assignment is evidence-first: [VENDOR_DOMAIN_MAPPING.md](VENDOR_DOMAIN_MAPPING.md). Do not implement vendor adapters until a domain is **SELECTED**.
+
 ## What each suite proves
 
 ### Schema (`test/schema/`)
