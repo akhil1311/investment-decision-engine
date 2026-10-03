@@ -4,6 +4,8 @@
 **Base:** tag `v0.1.0`  
 **Rule:** Do not design or code an adapter against a source until this matrix is filled and critical rows pass.
 
+**Live filled worksheet (public-doc research, 2026-10-03):** [VENDOR_AUDIT_LIVE.md](VENDOR_AUDIT_LIVE.md) — critical rows 6/11/12/15/20 first; no PASS without India sample + contract.
+
 ## How to use
 
 1. One table (or one column set) **per candidate source**.
@@ -21,14 +23,18 @@ Not:
 
 ## Candidate identity
 
-| Field | Candidate A | Candidate B | Candidate C |
-|-------|-------------|-------------|-------------|
-| Name / product | | | |
-| Delivery (API / file / both) | | | |
-| India cash equity coverage | | | |
-| License summary | | | |
-| Audit date | | | |
-| Auditor | | | |
+Use six columns in the live worksheet. Short labels:
+
+| Field | LSEG | S&P | Bloomberg | FactSet | NSE | EODHD |
+|-------|------|-----|-----------|---------|-----|-------|
+| Role | Full-stack | Full-stack | Full-stack | Full-stack | India-native domain | Low-cost control |
+| Name / product | LSEG Data & Analytics / Company Fundamentals PIT | S&P Global MI Compustat / Capital IQ | Bloomberg Data License / COFI PIT | FactSet Fundamentals PIT + As-Reported | NSE Data & Analytics / NSE Indices | EODHD API |
+| Delivery | Feed / DaaS / API (confirm SKU) | Xpressfeed / API / platform | API / SFTP / cloud | API | SFTP / leased line / online | REST API |
+| India cash equity | Confirm in sample | Confirm India PIT depth | Confirm | Confirm | Native NSE | Confirm NSE tickers |
+| License summary | UNKNOWN — contract | UNKNOWN — contract | UNKNOWN — contract | UNKNOWN — contract | UNKNOWN — see usage policy | UNKNOWN — ToS |
+| Audit date | 2026-10-03 prelim | 2026-10-03 prelim | 2026-10-03 prelim | 2026-10-03 prelim | 2026-10-03 prelim | 2026-10-03 prelim |
+
+Detailed marks and URLs: [VENDOR_AUDIT_LIVE.md](VENDOR_AUDIT_LIVE.md).
 
 ## Requirement matrix
 
@@ -140,4 +146,5 @@ Record the go / no-go here when the matrix is complete:
 
 | Date | Decision | Candidates | Rationale |
 |------|----------|------------|-----------|
+| 2026-10-03 | Preliminary public-doc audit recorded | LSEG, S&P, Bloomberg, FactSet, NSE, EODHD | Critical rows remain unresolved; questionnaire + India samples next; no purchase/adapter |
 | | | | |

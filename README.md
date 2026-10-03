@@ -55,6 +55,7 @@ Work on branch `data-promotion-v1`. Do not rewrite engines for a vendor.
 |-----|----------------|
 | [docs/DATA_PROMOTION_V1.md](docs/DATA_PROMOTION_V1.md) | What “real-data compatible” means; phased plan |
 | [docs/VENDOR_AUDIT_MATRIX.md](docs/VENDOR_AUDIT_MATRIX.md) | Pass/Fail worksheet before any adapter code |
+| [docs/VENDOR_AUDIT_LIVE.md](docs/VENDOR_AUDIT_LIVE.md) | Live audit marks + vendor questionnaire (no coding yet) |
 
 Machine-readable thresholds and schemas live under `config/` (label specs, decision vocabulary, data-contract). Prefer those for exact numbers; prefer the docs above for intent and wiring.
 
