@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Investment Decision Engine — V1 Assessment</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Investment Decision Engine</h1>
+        <p class="tagline">
+          EOD PIT assessment · decision gate locked · research fixture universe
+        </p>
+      </header>
+
+      <form id="assess-form">
+        <label>
+          Security
+          <select id="symbol" required></select>
+        </label>
+        <label>
+          Position
+          <select id="position_state">
+            <option value="NOT_HELD">NOT_HELD</option>
+            <option value="HELD">HELD</option>
+          </select>
+        </label>
+        <div id="held-fields" class="hidden">
+          <label>
+            Quantity
+            <input id="quantity" type="number" min="0" step="1" />
+          </label>
+          <label>
+            Average entry (INR)
+            <input id="average_entry_price" type="number" min="0" step="0.01" />
+          </label>
+          <label>
+            Entry date
+            <input id="entry_date" type="date" />
+          </label>
+        </div>
+        <label>
+          as_of (optional EOD)
+          <input
+            id="as_of"
+            type="text"
+            placeholder="YYYY-MM-DDT15:30:00+05:30 (default: latest completed session)"
+          />
+        </label>
+        <button type="submit">Assess</button>
+      </form>
+
+      <pre id="error" class="error hidden"></pre>
+      <section id="card" class="card hidden"></section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

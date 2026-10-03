@@ -1,0 +1,71 @@
+{
+  "version": "v1",
+  "labels": ["GOOD", "NEUTRAL", "WARNING", "RED_FLAG"],
+  "unavailable": "UNAVAILABLE",
+  "metrics": {
+    "revenue_yoy": {
+      "formula": "(new/old - 1) * 100",
+      "units": "percentage_points",
+      "comparator_must_be_gt": 0,
+      "require_same": [
+        "fiscal_period_id",
+        "fiscal_period_duration",
+        "statement_type",
+        "consolidation",
+        "currency",
+        "unit"
+      ],
+      "forbid_sequential_substitute": true,
+      "thresholds": {
+        "RED_FLAG": { "lt": -10 },
+        "WARNING": { "gte": -10, "lt": 0 },
+        "NEUTRAL": { "gte": 0, "lte": 10 },
+        "GOOD": { "gt": 10 }
+      }
+    },
+    "pat_yoy": {
+      "formula": "(new/old - 1) * 100",
+      "units": "percentage_points",
+      "comparator_must_be_gt": 0,
+      "require_same": [
+        "fiscal_period_id",
+        "fiscal_period_duration",
+        "statement_type",
+        "consolidation",
+        "currency",
+        "unit"
+      ],
+      "forbid_sequential_substitute": true,
+      "thresholds": {
+        "RED_FLAG": { "lt": -10 },
+        "WARNING": { "gte": -10, "lt": 0 },
+        "NEUTRAL": { "gte": 0, "lte": 10 },
+        "GOOD": { "gt": 10 }
+      }
+    },
+    "debt_to_equity": {
+      "formula": "total_debt / equity",
+      "same_balance_sheet_snapshot": true,
+      "thresholds": {
+        "GOOD": { "gte": 0, "lt": 0.5 },
+        "NEUTRAL": { "gte": 0.5, "lte": 1.0 },
+        "WARNING": { "gt": 1.0, "lte": 2.0 },
+        "RED_FLAG": { "gt": 2.0 }
+      },
+      "equity_lte_0": "RED_FLAG"
+    },
+    "cfo_to_pat": {
+      "same_fiscal_period": true,
+      "when_pat_gt_0": {
+        "GOOD": { "gte": 0.8 },
+        "NEUTRAL": { "gte": 0.5, "lt": 0.8 },
+        "WARNING": { "gte": 0, "lt": 0.5 },
+        "RED_FLAG_if_cfo_lt_0": true
+      },
+      "when_pat_lte_0": {
+        "RED_FLAG_if_cfo_lte_0": true,
+        "WARNING_if_cfo_gt_0": true
+      }
+    }
+  }
+}

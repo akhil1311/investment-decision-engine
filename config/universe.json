@@ -1,0 +1,56 @@
+{
+  "role": "research_fixture",
+  "description": "Development/research fixture only — not a validated production universe",
+  "timezone": "Asia/Kolkata",
+  "session_close": "15:30:00+05:30",
+  "securities": [
+    {
+      "security_id": "RELIANCE",
+      "nse_symbol": "RELIANCE",
+      "isin": "INE002A01018",
+      "name": "Reliance Industries Limited"
+    },
+    {
+      "security_id": "HDFCBANK",
+      "nse_symbol": "HDFCBANK",
+      "isin": "INE040A01034",
+      "name": "HDFC Bank Limited"
+    },
+    {
+      "security_id": "INFY",
+      "nse_symbol": "INFY",
+      "isin": "INE009A01021",
+      "name": "Infosys Limited"
+    },
+    {
+      "security_id": "ITC",
+      "nse_symbol": "ITC",
+      "isin": "INE154A01025",
+      "name": "ITC Limited"
+    },
+    {
+      "security_id": "SUNPHARMA",
+      "nse_symbol": "SUNPHARMA",
+      "isin": "INE044A01036",
+      "name": "Sun Pharmaceutical Industries Limited"
+    },
+    {
+      "security_id": "LT",
+      "nse_symbol": "LT",
+      "isin": "INE018A01030",
+      "name": "Larsen & Toubro Limited"
+    },
+    {
+      "security_id": "TCS",
+      "nse_symbol": "TCS",
+      "isin": "INE467B01029",
+      "name": "Tata Consultancy Services Limited"
+    },
+    {
+      "security_id": "ONGC",
+      "nse_symbol": "ONGC",
+      "isin": "INE213A01029",
+      "name": "Oil and Natural Gas Corporation Limited"
+    }
+  ]
+}

@@ -1,0 +1,3602 @@
+[
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-02",
+    "close": 21989,
+    "available_at": "2024-01-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-03",
+    "close": 21986.8,
+    "available_at": "2024-01-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-04",
+    "close": 21993.4,
+    "available_at": "2024-01-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-05",
+    "close": 22008.79,
+    "available_at": "2024-01-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-08",
+    "close": 22033,
+    "available_at": "2024-01-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-09",
+    "close": 22021.99,
+    "available_at": "2024-01-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-10",
+    "close": 22019.78,
+    "available_at": "2024-01-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-11",
+    "close": 22026.39,
+    "available_at": "2024-01-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-12",
+    "close": 22041.81,
+    "available_at": "2024-01-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-15",
+    "close": 22066.05,
+    "available_at": "2024-01-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-16",
+    "close": 22055.02,
+    "available_at": "2024-01-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-17",
+    "close": 22052.82,
+    "available_at": "2024-01-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-18",
+    "close": 22059.43,
+    "available_at": "2024-01-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-19",
+    "close": 22074.87,
+    "available_at": "2024-01-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-22",
+    "close": 22099.16,
+    "available_at": "2024-01-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-23",
+    "close": 22088.11,
+    "available_at": "2024-01-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-24",
+    "close": 22085.9,
+    "available_at": "2024-01-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-25",
+    "close": 22092.52,
+    "available_at": "2024-01-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-26",
+    "close": 22107.99,
+    "available_at": "2024-01-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-29",
+    "close": 22132.31,
+    "available_at": "2024-01-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-30",
+    "close": 22121.24,
+    "available_at": "2024-01-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-01-31",
+    "close": 22119.03,
+    "available_at": "2024-01-31T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-01",
+    "close": 22125.66,
+    "available_at": "2024-02-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-02",
+    "close": 22141.15,
+    "available_at": "2024-02-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-05",
+    "close": 22165.51,
+    "available_at": "2024-02-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-06",
+    "close": 22154.42,
+    "available_at": "2024-02-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-07",
+    "close": 22152.21,
+    "available_at": "2024-02-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-08",
+    "close": 22158.85,
+    "available_at": "2024-02-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-09",
+    "close": 22174.37,
+    "available_at": "2024-02-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-12",
+    "close": 22198.76,
+    "available_at": "2024-02-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-13",
+    "close": 22187.66,
+    "available_at": "2024-02-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-14",
+    "close": 22185.44,
+    "available_at": "2024-02-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-15",
+    "close": 22192.09,
+    "available_at": "2024-02-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-16",
+    "close": 22207.63,
+    "available_at": "2024-02-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-19",
+    "close": 22232.06,
+    "available_at": "2024-02-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-20",
+    "close": 22220.94,
+    "available_at": "2024-02-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-21",
+    "close": 22218.72,
+    "available_at": "2024-02-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-22",
+    "close": 22225.39,
+    "available_at": "2024-02-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-23",
+    "close": 22240.94,
+    "available_at": "2024-02-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-26",
+    "close": 22265.41,
+    "available_at": "2024-02-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-27",
+    "close": 22254.28,
+    "available_at": "2024-02-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-28",
+    "close": 22252.05,
+    "available_at": "2024-02-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-02-29",
+    "close": 22258.73,
+    "available_at": "2024-02-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-01",
+    "close": 22274.31,
+    "available_at": "2024-03-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-04",
+    "close": 22298.81,
+    "available_at": "2024-03-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-05",
+    "close": 22287.66,
+    "available_at": "2024-03-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-06",
+    "close": 22285.43,
+    "available_at": "2024-03-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-07",
+    "close": 22292.12,
+    "available_at": "2024-03-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-08",
+    "close": 22307.72,
+    "available_at": "2024-03-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-11",
+    "close": 22332.26,
+    "available_at": "2024-03-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-12",
+    "close": 22321.09,
+    "available_at": "2024-03-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-13",
+    "close": 22318.86,
+    "available_at": "2024-03-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-14",
+    "close": 22325.56,
+    "available_at": "2024-03-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-15",
+    "close": 22341.18,
+    "available_at": "2024-03-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-18",
+    "close": 22365.76,
+    "available_at": "2024-03-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-19",
+    "close": 22354.58,
+    "available_at": "2024-03-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-20",
+    "close": 22352.34,
+    "available_at": "2024-03-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-21",
+    "close": 22359.05,
+    "available_at": "2024-03-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-22",
+    "close": 22374.7,
+    "available_at": "2024-03-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-25",
+    "close": 22399.31,
+    "available_at": "2024-03-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-26",
+    "close": 22388.11,
+    "available_at": "2024-03-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-27",
+    "close": 22385.87,
+    "available_at": "2024-03-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-28",
+    "close": 22392.59,
+    "available_at": "2024-03-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-03-29",
+    "close": 22408.26,
+    "available_at": "2024-03-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-01",
+    "close": 22432.91,
+    "available_at": "2024-04-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-02",
+    "close": 22421.69,
+    "available_at": "2024-04-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-03",
+    "close": 22419.45,
+    "available_at": "2024-04-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-04",
+    "close": 22426.18,
+    "available_at": "2024-04-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-05",
+    "close": 22441.88,
+    "available_at": "2024-04-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-08",
+    "close": 22466.56,
+    "available_at": "2024-04-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-09",
+    "close": 22455.33,
+    "available_at": "2024-04-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-10",
+    "close": 22453.08,
+    "available_at": "2024-04-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-11",
+    "close": 22459.82,
+    "available_at": "2024-04-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-12",
+    "close": 22475.54,
+    "available_at": "2024-04-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-15",
+    "close": 22500.26,
+    "available_at": "2024-04-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-16",
+    "close": 22489.01,
+    "available_at": "2024-04-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-17",
+    "close": 22486.77,
+    "available_at": "2024-04-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-18",
+    "close": 22493.51,
+    "available_at": "2024-04-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-19",
+    "close": 22509.26,
+    "available_at": "2024-04-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-22",
+    "close": 22534.02,
+    "available_at": "2024-04-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-23",
+    "close": 22522.75,
+    "available_at": "2024-04-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-24",
+    "close": 22520.5,
+    "available_at": "2024-04-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-25",
+    "close": 22527.25,
+    "available_at": "2024-04-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-26",
+    "close": 22543.02,
+    "available_at": "2024-04-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-29",
+    "close": 22567.82,
+    "available_at": "2024-04-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-04-30",
+    "close": 22556.54,
+    "available_at": "2024-04-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-01",
+    "close": 22554.28,
+    "available_at": "2024-05-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-02",
+    "close": 22561.05,
+    "available_at": "2024-05-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-03",
+    "close": 22576.84,
+    "available_at": "2024-05-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-06",
+    "close": 22601.67,
+    "available_at": "2024-05-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-07",
+    "close": 22590.37,
+    "available_at": "2024-05-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-08",
+    "close": 22588.11,
+    "available_at": "2024-05-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-09",
+    "close": 22594.89,
+    "available_at": "2024-05-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-10",
+    "close": 22610.71,
+    "available_at": "2024-05-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-13",
+    "close": 22635.58,
+    "available_at": "2024-05-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-14",
+    "close": 22624.26,
+    "available_at": "2024-05-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-15",
+    "close": 22622,
+    "available_at": "2024-05-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-16",
+    "close": 22628.79,
+    "available_at": "2024-05-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-17",
+    "close": 22644.63,
+    "available_at": "2024-05-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-20",
+    "close": 22669.54,
+    "available_at": "2024-05-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-21",
+    "close": 22658.2,
+    "available_at": "2024-05-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-22",
+    "close": 22655.93,
+    "available_at": "2024-05-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-23",
+    "close": 22662.73,
+    "available_at": "2024-05-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-24",
+    "close": 22678.6,
+    "available_at": "2024-05-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-27",
+    "close": 22703.54,
+    "available_at": "2024-05-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-28",
+    "close": 22692.19,
+    "available_at": "2024-05-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-29",
+    "close": 22689.92,
+    "available_at": "2024-05-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-30",
+    "close": 22696.73,
+    "available_at": "2024-05-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-05-31",
+    "close": 22712.62,
+    "available_at": "2024-05-31T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-03",
+    "close": 22737.6,
+    "available_at": "2024-06-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-04",
+    "close": 22726.23,
+    "available_at": "2024-06-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-05",
+    "close": 22723.96,
+    "available_at": "2024-06-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-06",
+    "close": 22730.78,
+    "available_at": "2024-06-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-07",
+    "close": 22746.69,
+    "available_at": "2024-06-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-10",
+    "close": 22771.71,
+    "available_at": "2024-06-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-11",
+    "close": 22760.32,
+    "available_at": "2024-06-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-12",
+    "close": 22758.05,
+    "available_at": "2024-06-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-13",
+    "close": 22764.87,
+    "available_at": "2024-06-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-14",
+    "close": 22780.81,
+    "available_at": "2024-06-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-17",
+    "close": 22805.87,
+    "available_at": "2024-06-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-18",
+    "close": 22794.46,
+    "available_at": "2024-06-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-19",
+    "close": 22792.19,
+    "available_at": "2024-06-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-20",
+    "close": 22799.02,
+    "available_at": "2024-06-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-21",
+    "close": 22814.98,
+    "available_at": "2024-06-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-24",
+    "close": 22840.08,
+    "available_at": "2024-06-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-25",
+    "close": 22828.66,
+    "available_at": "2024-06-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-26",
+    "close": 22826.38,
+    "available_at": "2024-06-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-27",
+    "close": 22833.22,
+    "available_at": "2024-06-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-06-28",
+    "close": 22849.21,
+    "available_at": "2024-06-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-01",
+    "close": 22874.34,
+    "available_at": "2024-07-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-02",
+    "close": 22862.9,
+    "available_at": "2024-07-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-03",
+    "close": 22860.62,
+    "available_at": "2024-07-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-04",
+    "close": 22867.48,
+    "available_at": "2024-07-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-05",
+    "close": 22883.48,
+    "available_at": "2024-07-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-08",
+    "close": 22908.66,
+    "available_at": "2024-07-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-09",
+    "close": 22897.2,
+    "available_at": "2024-07-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-10",
+    "close": 22894.91,
+    "available_at": "2024-07-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-11",
+    "close": 22901.78,
+    "available_at": "2024-07-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-12",
+    "close": 22917.81,
+    "available_at": "2024-07-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-15",
+    "close": 22943.02,
+    "available_at": "2024-07-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-16",
+    "close": 22931.55,
+    "available_at": "2024-07-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-17",
+    "close": 22929.26,
+    "available_at": "2024-07-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-18",
+    "close": 22936.13,
+    "available_at": "2024-07-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-19",
+    "close": 22952.19,
+    "available_at": "2024-07-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-22",
+    "close": 22977.44,
+    "available_at": "2024-07-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-23",
+    "close": 22965.95,
+    "available_at": "2024-07-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-24",
+    "close": 22963.65,
+    "available_at": "2024-07-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-25",
+    "close": 22970.54,
+    "available_at": "2024-07-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-26",
+    "close": 22986.62,
+    "available_at": "2024-07-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-29",
+    "close": 23011.91,
+    "available_at": "2024-07-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-30",
+    "close": 23000.4,
+    "available_at": "2024-07-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-07-31",
+    "close": 22998.1,
+    "available_at": "2024-07-31T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-01",
+    "close": 23005,
+    "available_at": "2024-08-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-02",
+    "close": 23021.1,
+    "available_at": "2024-08-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-05",
+    "close": 23046.43,
+    "available_at": "2024-08-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-06",
+    "close": 23034.9,
+    "available_at": "2024-08-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-07",
+    "close": 23032.6,
+    "available_at": "2024-08-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-08",
+    "close": 23039.51,
+    "available_at": "2024-08-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-09",
+    "close": 23055.64,
+    "available_at": "2024-08-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-12",
+    "close": 23081,
+    "available_at": "2024-08-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-13",
+    "close": 23069.46,
+    "available_at": "2024-08-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-14",
+    "close": 23067.15,
+    "available_at": "2024-08-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-15",
+    "close": 23074.07,
+    "available_at": "2024-08-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-16",
+    "close": 23090.22,
+    "available_at": "2024-08-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-19",
+    "close": 23115.62,
+    "available_at": "2024-08-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-20",
+    "close": 23104.06,
+    "available_at": "2024-08-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-21",
+    "close": 23101.75,
+    "available_at": "2024-08-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-22",
+    "close": 23108.68,
+    "available_at": "2024-08-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-23",
+    "close": 23124.86,
+    "available_at": "2024-08-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-26",
+    "close": 23150.3,
+    "available_at": "2024-08-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-27",
+    "close": 23138.72,
+    "available_at": "2024-08-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-28",
+    "close": 23136.41,
+    "available_at": "2024-08-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-29",
+    "close": 23143.35,
+    "available_at": "2024-08-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-08-30",
+    "close": 23159.55,
+    "available_at": "2024-08-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-02",
+    "close": 23185.03,
+    "available_at": "2024-09-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-03",
+    "close": 23173.43,
+    "available_at": "2024-09-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-04",
+    "close": 23171.12,
+    "available_at": "2024-09-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-05",
+    "close": 23178.07,
+    "available_at": "2024-09-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-06",
+    "close": 23194.29,
+    "available_at": "2024-09-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-09",
+    "close": 23219.8,
+    "available_at": "2024-09-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-10",
+    "close": 23208.19,
+    "available_at": "2024-09-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-11",
+    "close": 23205.87,
+    "available_at": "2024-09-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-12",
+    "close": 23212.84,
+    "available_at": "2024-09-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-13",
+    "close": 23229.08,
+    "available_at": "2024-09-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-16",
+    "close": 23254.64,
+    "available_at": "2024-09-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-17",
+    "close": 23243.01,
+    "available_at": "2024-09-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-18",
+    "close": 23240.69,
+    "available_at": "2024-09-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-19",
+    "close": 23247.66,
+    "available_at": "2024-09-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-20",
+    "close": 23263.93,
+    "available_at": "2024-09-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-23",
+    "close": 23289.52,
+    "available_at": "2024-09-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-24",
+    "close": 23277.88,
+    "available_at": "2024-09-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-25",
+    "close": 23275.55,
+    "available_at": "2024-09-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-26",
+    "close": 23282.53,
+    "available_at": "2024-09-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-27",
+    "close": 23298.83,
+    "available_at": "2024-09-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-09-30",
+    "close": 23324.46,
+    "available_at": "2024-09-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-01",
+    "close": 23312.8,
+    "available_at": "2024-10-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-02",
+    "close": 23310.46,
+    "available_at": "2024-10-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-03",
+    "close": 23317.46,
+    "available_at": "2024-10-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-04",
+    "close": 23333.78,
+    "available_at": "2024-10-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-07",
+    "close": 23359.45,
+    "available_at": "2024-10-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-08",
+    "close": 23347.77,
+    "available_at": "2024-10-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-09",
+    "close": 23345.43,
+    "available_at": "2024-10-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-10",
+    "close": 23352.44,
+    "available_at": "2024-10-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-11",
+    "close": 23368.78,
+    "available_at": "2024-10-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-14",
+    "close": 23394.49,
+    "available_at": "2024-10-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-15",
+    "close": 23382.79,
+    "available_at": "2024-10-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-16",
+    "close": 23380.45,
+    "available_at": "2024-10-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-17",
+    "close": 23387.47,
+    "available_at": "2024-10-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-18",
+    "close": 23403.84,
+    "available_at": "2024-10-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-21",
+    "close": 23429.58,
+    "available_at": "2024-10-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-22",
+    "close": 23417.87,
+    "available_at": "2024-10-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-23",
+    "close": 23415.53,
+    "available_at": "2024-10-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-24",
+    "close": 23422.55,
+    "available_at": "2024-10-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-25",
+    "close": 23438.95,
+    "available_at": "2024-10-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-28",
+    "close": 23464.73,
+    "available_at": "2024-10-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-29",
+    "close": 23453,
+    "available_at": "2024-10-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-30",
+    "close": 23450.65,
+    "available_at": "2024-10-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-10-31",
+    "close": 23457.69,
+    "available_at": "2024-10-31T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-01",
+    "close": 23474.11,
+    "available_at": "2024-11-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-04",
+    "close": 23499.93,
+    "available_at": "2024-11-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-05",
+    "close": 23488.18,
+    "available_at": "2024-11-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-06",
+    "close": 23485.83,
+    "available_at": "2024-11-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-07",
+    "close": 23492.88,
+    "available_at": "2024-11-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-08",
+    "close": 23509.32,
+    "available_at": "2024-11-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-11",
+    "close": 23535.18,
+    "available_at": "2024-11-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-12",
+    "close": 23523.41,
+    "available_at": "2024-11-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-13",
+    "close": 23521.06,
+    "available_at": "2024-11-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-14",
+    "close": 23528.12,
+    "available_at": "2024-11-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-15",
+    "close": 23544.59,
+    "available_at": "2024-11-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-18",
+    "close": 23570.49,
+    "available_at": "2024-11-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-19",
+    "close": 23558.7,
+    "available_at": "2024-11-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-20",
+    "close": 23556.34,
+    "available_at": "2024-11-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-21",
+    "close": 23563.41,
+    "available_at": "2024-11-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-22",
+    "close": 23579.91,
+    "available_at": "2024-11-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-25",
+    "close": 23605.84,
+    "available_at": "2024-11-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-26",
+    "close": 23594.04,
+    "available_at": "2024-11-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-27",
+    "close": 23591.68,
+    "available_at": "2024-11-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-28",
+    "close": 23598.76,
+    "available_at": "2024-11-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-11-29",
+    "close": 23615.28,
+    "available_at": "2024-11-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-02",
+    "close": 23641.25,
+    "available_at": "2024-12-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-03",
+    "close": 23629.43,
+    "available_at": "2024-12-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-04",
+    "close": 23627.07,
+    "available_at": "2024-12-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-05",
+    "close": 23634.16,
+    "available_at": "2024-12-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-06",
+    "close": 23650.7,
+    "available_at": "2024-12-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-09",
+    "close": 23676.72,
+    "available_at": "2024-12-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-10",
+    "close": 23664.88,
+    "available_at": "2024-12-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-11",
+    "close": 23662.51,
+    "available_at": "2024-12-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-12",
+    "close": 23669.61,
+    "available_at": "2024-12-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-13",
+    "close": 23686.18,
+    "available_at": "2024-12-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-16",
+    "close": 23712.24,
+    "available_at": "2024-12-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-17",
+    "close": 23700.38,
+    "available_at": "2024-12-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-18",
+    "close": 23698.01,
+    "available_at": "2024-12-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-19",
+    "close": 23705.12,
+    "available_at": "2024-12-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-20",
+    "close": 23721.71,
+    "available_at": "2024-12-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-23",
+    "close": 23747.81,
+    "available_at": "2024-12-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-24",
+    "close": 23735.93,
+    "available_at": "2024-12-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-25",
+    "close": 23733.56,
+    "available_at": "2024-12-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-26",
+    "close": 23740.68,
+    "available_at": "2024-12-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-27",
+    "close": 23757.3,
+    "available_at": "2024-12-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-30",
+    "close": 23783.43,
+    "available_at": "2024-12-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2024-12-31",
+    "close": 23771.54,
+    "available_at": "2024-12-31T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-01",
+    "close": 23769.16,
+    "available_at": "2025-01-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-02",
+    "close": 23776.29,
+    "available_at": "2025-01-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-03",
+    "close": 23792.94,
+    "available_at": "2025-01-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-06",
+    "close": 23819.11,
+    "available_at": "2025-01-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-07",
+    "close": 23807.2,
+    "available_at": "2025-01-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-08",
+    "close": 23804.82,
+    "available_at": "2025-01-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-09",
+    "close": 23811.96,
+    "available_at": "2025-01-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-10",
+    "close": 23828.63,
+    "available_at": "2025-01-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-13",
+    "close": 23854.84,
+    "available_at": "2025-01-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-14",
+    "close": 23842.91,
+    "available_at": "2025-01-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-15",
+    "close": 23840.53,
+    "available_at": "2025-01-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-16",
+    "close": 23847.68,
+    "available_at": "2025-01-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-17",
+    "close": 23864.37,
+    "available_at": "2025-01-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-20",
+    "close": 23890.62,
+    "available_at": "2025-01-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-21",
+    "close": 23878.68,
+    "available_at": "2025-01-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-22",
+    "close": 23876.29,
+    "available_at": "2025-01-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-23",
+    "close": 23883.45,
+    "available_at": "2025-01-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-24",
+    "close": 23900.17,
+    "available_at": "2025-01-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-27",
+    "close": 23926.46,
+    "available_at": "2025-01-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-28",
+    "close": 23914.5,
+    "available_at": "2025-01-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-29",
+    "close": 23912.11,
+    "available_at": "2025-01-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-30",
+    "close": 23919.28,
+    "available_at": "2025-01-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-01-31",
+    "close": 23936.03,
+    "available_at": "2025-01-31T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-03",
+    "close": 23962.36,
+    "available_at": "2025-02-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-04",
+    "close": 23950.37,
+    "available_at": "2025-02-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-05",
+    "close": 23947.98,
+    "available_at": "2025-02-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-06",
+    "close": 23955.16,
+    "available_at": "2025-02-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-07",
+    "close": 23971.93,
+    "available_at": "2025-02-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-10",
+    "close": 23998.3,
+    "available_at": "2025-02-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-11",
+    "close": 23986.3,
+    "available_at": "2025-02-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-12",
+    "close": 23983.9,
+    "available_at": "2025-02-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-13",
+    "close": 23991.1,
+    "available_at": "2025-02-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-14",
+    "close": 24007.89,
+    "available_at": "2025-02-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-17",
+    "close": 24034.3,
+    "available_at": "2025-02-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-18",
+    "close": 24022.28,
+    "available_at": "2025-02-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-19",
+    "close": 24019.88,
+    "available_at": "2025-02-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-20",
+    "close": 24027.09,
+    "available_at": "2025-02-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-21",
+    "close": 24043.91,
+    "available_at": "2025-02-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-24",
+    "close": 24070.35,
+    "available_at": "2025-02-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-25",
+    "close": 24058.32,
+    "available_at": "2025-02-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-26",
+    "close": 24055.91,
+    "available_at": "2025-02-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-27",
+    "close": 24063.13,
+    "available_at": "2025-02-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-02-28",
+    "close": 24079.97,
+    "available_at": "2025-02-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-03",
+    "close": 24106.46,
+    "available_at": "2025-03-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-04",
+    "close": 24094.41,
+    "available_at": "2025-03-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-05",
+    "close": 24092,
+    "available_at": "2025-03-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-06",
+    "close": 24099.23,
+    "available_at": "2025-03-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-07",
+    "close": 24116.1,
+    "available_at": "2025-03-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-10",
+    "close": 24142.62,
+    "available_at": "2025-03-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-11",
+    "close": 24130.55,
+    "available_at": "2025-03-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-12",
+    "close": 24128.14,
+    "available_at": "2025-03-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-13",
+    "close": 24135.38,
+    "available_at": "2025-03-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-14",
+    "close": 24152.27,
+    "available_at": "2025-03-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-17",
+    "close": 24178.84,
+    "available_at": "2025-03-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-18",
+    "close": 24166.75,
+    "available_at": "2025-03-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-19",
+    "close": 24164.33,
+    "available_at": "2025-03-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-20",
+    "close": 24171.58,
+    "available_at": "2025-03-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-21",
+    "close": 24188.5,
+    "available_at": "2025-03-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-24",
+    "close": 24215.11,
+    "available_at": "2025-03-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-25",
+    "close": 24203,
+    "available_at": "2025-03-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-26",
+    "close": 24200.58,
+    "available_at": "2025-03-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-27",
+    "close": 24207.84,
+    "available_at": "2025-03-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-28",
+    "close": 24224.79,
+    "available_at": "2025-03-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-03-31",
+    "close": 24251.44,
+    "available_at": "2025-03-31T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-01",
+    "close": 24239.31,
+    "available_at": "2025-04-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-02",
+    "close": 24236.89,
+    "available_at": "2025-04-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-03",
+    "close": 24244.16,
+    "available_at": "2025-04-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-04",
+    "close": 24261.13,
+    "available_at": "2025-04-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-07",
+    "close": 24287.82,
+    "available_at": "2025-04-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-08",
+    "close": 24275.67,
+    "available_at": "2025-04-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-09",
+    "close": 24273.24,
+    "available_at": "2025-04-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-10",
+    "close": 24280.53,
+    "available_at": "2025-04-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-11",
+    "close": 24297.52,
+    "available_at": "2025-04-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-14",
+    "close": 24324.25,
+    "available_at": "2025-04-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-15",
+    "close": 24312.09,
+    "available_at": "2025-04-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-16",
+    "close": 24309.66,
+    "available_at": "2025-04-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-17",
+    "close": 24316.95,
+    "available_at": "2025-04-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-18",
+    "close": 24333.97,
+    "available_at": "2025-04-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-21",
+    "close": 24360.74,
+    "available_at": "2025-04-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-22",
+    "close": 24348.56,
+    "available_at": "2025-04-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-23",
+    "close": 24346.12,
+    "available_at": "2025-04-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-24",
+    "close": 24353.43,
+    "available_at": "2025-04-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-25",
+    "close": 24370.48,
+    "available_at": "2025-04-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-28",
+    "close": 24397.28,
+    "available_at": "2025-04-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-29",
+    "close": 24385.08,
+    "available_at": "2025-04-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-04-30",
+    "close": 24382.65,
+    "available_at": "2025-04-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-01",
+    "close": 24389.96,
+    "available_at": "2025-05-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-02",
+    "close": 24407.03,
+    "available_at": "2025-05-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-05",
+    "close": 24433.88,
+    "available_at": "2025-05-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-06",
+    "close": 24421.66,
+    "available_at": "2025-05-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-07",
+    "close": 24419.22,
+    "available_at": "2025-05-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-08",
+    "close": 24426.55,
+    "available_at": "2025-05-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-09",
+    "close": 24443.65,
+    "available_at": "2025-05-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-12",
+    "close": 24470.53,
+    "available_at": "2025-05-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-13",
+    "close": 24458.3,
+    "available_at": "2025-05-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-14",
+    "close": 24455.85,
+    "available_at": "2025-05-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-15",
+    "close": 24463.19,
+    "available_at": "2025-05-15T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-16",
+    "close": 24480.31,
+    "available_at": "2025-05-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-19",
+    "close": 24507.24,
+    "available_at": "2025-05-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-20",
+    "close": 24494.99,
+    "available_at": "2025-05-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-21",
+    "close": 24492.54,
+    "available_at": "2025-05-21T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-22",
+    "close": 24499.89,
+    "available_at": "2025-05-22T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-23",
+    "close": 24517.04,
+    "available_at": "2025-05-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-26",
+    "close": 24544.01,
+    "available_at": "2025-05-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-27",
+    "close": 24531.73,
+    "available_at": "2025-05-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-28",
+    "close": 24529.28,
+    "available_at": "2025-05-28T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-29",
+    "close": 24536.64,
+    "available_at": "2025-05-29T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-05-30",
+    "close": 24553.82,
+    "available_at": "2025-05-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-02",
+    "close": 24580.82,
+    "available_at": "2025-06-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-03",
+    "close": 24568.53,
+    "available_at": "2025-06-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-04",
+    "close": 24566.08,
+    "available_at": "2025-06-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-05",
+    "close": 24573.45,
+    "available_at": "2025-06-05T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-06",
+    "close": 24590.65,
+    "available_at": "2025-06-06T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-09",
+    "close": 24617.7,
+    "available_at": "2025-06-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-10",
+    "close": 24605.39,
+    "available_at": "2025-06-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-11",
+    "close": 24602.93,
+    "available_at": "2025-06-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-12",
+    "close": 24610.31,
+    "available_at": "2025-06-12T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-13",
+    "close": 24627.54,
+    "available_at": "2025-06-13T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-16",
+    "close": 24654.63,
+    "available_at": "2025-06-16T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-17",
+    "close": 24642.3,
+    "available_at": "2025-06-17T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-18",
+    "close": 24639.84,
+    "available_at": "2025-06-18T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-19",
+    "close": 24647.23,
+    "available_at": "2025-06-19T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-20",
+    "close": 24664.48,
+    "available_at": "2025-06-20T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-23",
+    "close": 24691.61,
+    "available_at": "2025-06-23T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-24",
+    "close": 24679.27,
+    "available_at": "2025-06-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-25",
+    "close": 24676.8,
+    "available_at": "2025-06-25T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-26",
+    "close": 24684.2,
+    "available_at": "2025-06-26T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-27",
+    "close": 24701.48,
+    "available_at": "2025-06-27T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-06-30",
+    "close": 24728.65,
+    "available_at": "2025-06-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-01",
+    "close": 24716.29,
+    "available_at": "2025-07-01T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-02",
+    "close": 24713.82,
+    "available_at": "2025-07-02T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-03",
+    "close": 24721.23,
+    "available_at": "2025-07-03T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-04",
+    "close": 24738.53,
+    "available_at": "2025-07-04T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-07",
+    "close": 24765.75,
+    "available_at": "2025-07-07T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-08",
+    "close": 24753.36,
+    "available_at": "2025-07-08T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-09",
+    "close": 24750.89,
+    "available_at": "2025-07-09T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-10",
+    "close": 24758.31,
+    "available_at": "2025-07-10T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-11",
+    "close": 24775.64,
+    "available_at": "2025-07-11T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  },
+  {
+    "benchmark_id": "NIFTY50_PRICE_INDEX",
+    "trading_date": "2025-07-14",
+    "close": 24802.9,
+    "available_at": "2025-07-14T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  }
+]

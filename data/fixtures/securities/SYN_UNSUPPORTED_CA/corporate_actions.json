@@ -1,0 +1,12 @@
+[
+  {
+    "action_id": "syn-rights-1",
+    "type": "rights",
+    "ex_date": "2025-07-01",
+    "available_at": "2025-06-24T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic",
+    "source_version": 1
+  }
+]

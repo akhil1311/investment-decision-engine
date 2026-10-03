@@ -1,0 +1,13 @@
+[
+  {
+    "action_id": "syn-future-bonus",
+    "type": "bonus",
+    "ex_date": "2024-05-21",
+    "factor": 0.5,
+    "available_at": "2024-04-30T15:30:00+05:30",
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic",
+    "source_version": 1
+  }
+]

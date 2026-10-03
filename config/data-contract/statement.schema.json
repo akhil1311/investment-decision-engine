@@ -1,0 +1,50 @@
+{
+  "$id": "statement.schema.json",
+  "type": "object",
+  "required": [
+    "statement_id",
+    "period_end",
+    "reported_at",
+    "available_at",
+    "source_version",
+    "fiscal_period_id",
+    "fiscal_period_duration",
+    "statement_type",
+    "consolidation",
+    "currency",
+    "unit",
+    "source_timestamp_type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "statement_id": { "type": "string" },
+    "period_end": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "reported_at": { "type": "string" },
+    "available_at": { "type": "string" },
+    "source_version": { "type": "number" },
+    "fiscal_period_id": { "type": "string" },
+    "fiscal_period_duration": {
+      "type": "string",
+      "enum": ["Q1", "Q2", "Q3", "Q4", "H1", "H2", "9M", "FY"]
+    },
+    "statement_type": {
+      "type": "string",
+      "enum": ["income_statement", "balance_sheet", "cash_flow"]
+    },
+    "consolidation": { "type": "string", "enum": ["consolidated", "standalone"] },
+    "currency": { "type": "string", "const": "INR" },
+    "unit": { "type": "string", "enum": ["INR", "INR_crore", "INR_million"] },
+    "revenue": { "type": ["number", "null"] },
+    "pat": { "type": ["number", "null"] },
+    "cfo": { "type": ["number", "null"] },
+    "total_debt": { "type": ["number", "null"] },
+    "equity": { "type": ["number", "null"] },
+    "source_timestamp_type": {
+      "type": "string",
+      "enum": ["exchange", "filing", "vendor", "derived"]
+    },
+    "timestamp_quality": { "type": "string", "enum": ["exact", "date_only"] },
+    "source": { "type": "string" }
+  },
+  "forbidden_fields": ["date"]
+}

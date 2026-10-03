@@ -1,0 +1,27 @@
+{
+  "decision": {
+    "state": "DISABLED",
+    "reason": "RESEARCH_GATE_CLOSED"
+  },
+  "confidence": {
+    "state": "WITHHELD",
+    "reason": "Decision layer is not research-qualified."
+  },
+  "evidence_status": "OK",
+  "sufficiency": "SUFFICIENT",
+  "tape_window": "MIXED",
+  "event_timing": "CLEAR",
+  "quality_labels": {
+    "revenue_yoy": "GOOD",
+    "pat_yoy": "GOOD",
+    "debt_to_equity": "GOOD",
+    "cfo_to_pat": "GOOD"
+  },
+  "market_labels": {
+    "sma_trend": "SUPPORTIVE",
+    "rs_20d": "MIXED",
+    "volatility_20d": "SUPPORTIVE",
+    "drawdown_60d": "SUPPORTIVE",
+    "liquidity_20d": "SUPPORTIVE"
+  }
+}

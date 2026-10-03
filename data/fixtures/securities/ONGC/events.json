@@ -1,0 +1,12 @@
+[
+  {
+    "event_id": "ONGC-earn-1",
+    "type": "earnings",
+    "event_date": "2025-07-10",
+    "available_at": "2025-07-01T15:30:00+05:30",
+    "source_version": 1,
+    "source_timestamp_type": "derived",
+    "timestamp_quality": "date_only",
+    "source": "fixture-synthetic"
+  }
+]

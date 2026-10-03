@@ -1,0 +1,16 @@
+{
+  "name": "investment-decision-engine",
+  "version": "0.1.0",
+  "description": "PROJECT 002 — EOD PIT assessment engine with locked decision gate",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.mjs",
+    "start": "node src/server.mjs",
+    "assess": "node src/cli-assess.mjs",
+    "fixtures:generate": "node scripts/generate-fixtures.mjs"
+  },
+  "private": true
+}

@@ -1,0 +1,56 @@
+{
+  "version": "v1",
+  "tape_labels": ["SUPPORTIVE", "MIXED", "HOSTILE"],
+  "price_basis": "research_adjusted_close",
+  "units": "percentage_points",
+  "liquidity_units": "INR_per_session",
+  "required_metrics": [
+    "sma_trend",
+    "rs_20d",
+    "volatility_20d",
+    "drawdown_60d",
+    "liquidity_20d"
+  ],
+  "lookbacks": {
+    "sma20_closes": 20,
+    "sma50_closes": 50,
+    "return_20_requires_closes": 21,
+    "volatility_20_requires_closes": 21,
+    "drawdown_60_requires_closes": 60,
+    "liquidity_20_sessions": 20
+  },
+  "metrics": {
+    "sma_trend": {
+      "SUPPORTIVE": "close > SMA20 AND close > SMA50",
+      "HOSTILE": "close < SMA20 AND close < SMA50",
+      "MIXED": "otherwise when both SMAs available"
+    },
+    "rs_20d": {
+      "SUPPORTIVE": { "gt": 2.0 },
+      "HOSTILE": { "lt": -2.0 },
+      "MIXED": "including exactly ±2.0"
+    },
+    "volatility_20d": {
+      "SUPPORTIVE": { "lt": 1.5 },
+      "MIXED": { "gte": 1.5, "lte": 2.5 },
+      "HOSTILE": { "gt": 2.5 }
+    },
+    "drawdown_60d": {
+      "SUPPORTIVE": { "gt": -5 },
+      "MIXED": { "gt": -10, "lte": -5 },
+      "HOSTILE": { "lte": -10 }
+    },
+    "liquidity_20d": {
+      "SUPPORTIVE": { "gte": 5e8 },
+      "MIXED": { "gte": 1e8, "lt": 5e8 },
+      "HOSTILE": { "lt": 1e8 }
+    }
+  },
+  "aggregate": {
+    "HOSTILE_if_any_available_HOSTILE": true,
+    "MIXED_if_any_MIXED_or_PARTIAL": true,
+    "SUPPORTIVE_only_if_all_five_available_and_SUPPORTIVE": true,
+    "UNAVAILABLE_never_votes": true,
+    "never_SUPPORTIVE_while_PARTIAL": true
+  }
+}

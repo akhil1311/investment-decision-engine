@@ -1,0 +1,41 @@
+{
+  "modes": {
+    "NEW_POSITION": {
+      "position_state": "NOT_HELD",
+      "states": ["INITIATE", "WAIT", "AVOID", "NO_VERDICT"]
+    },
+    "EXISTING_POSITION": {
+      "position_state": "HELD",
+      "states": ["HOLD", "REDUCE", "EXIT", "WAIT", "NO_VERDICT"]
+    }
+  },
+  "decision_states": [
+    "DISABLED",
+    "INITIATE",
+    "WAIT",
+    "AVOID",
+    "HOLD",
+    "REDUCE",
+    "EXIT",
+    "NO_VERDICT"
+  ],
+  "evidence_quality": ["OK", "INCOMPLETE", "STALE", "UNAVAILABLE", "CONFLICTING"],
+  "evidence_status_precedence": [
+    "CONFLICTING",
+    "STALE",
+    "INCOMPLETE",
+    "UNAVAILABLE",
+    "OK"
+  ],
+  "sufficiency": ["SUFFICIENT", "PARTIAL", "INSUFFICIENT"],
+  "v1_gate": {
+    "decision_state": "DISABLED",
+    "reason": "RESEARCH_GATE_CLOSED",
+    "confidence_state": "WITHHELD"
+  },
+  "notes": {
+    "NO_VERDICT": "Decision state only — never reuse as evidence quality enum",
+    "WAIT_vs_NO_VERDICT": "WAIT = model ran, do not change size; NO_VERDICT = cannot recommend",
+    "HOLD": "No sufficiently strong reason to exit or reduce — not a prediction the stock will rise"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": "v1",
+  "earnings_warning_sessions": 5,
+  "ex_date_warning_sessions": 5,
+  "timing_labels": ["UNFAVORABLE", "CLEAR", "UNKNOWN"],
+  "distance": {
+    "definition": "Count trading sessions strictly after as_of whose session date <= event_date; as_of never counted",
+    "weekend_before_next_session": "If event_date after as_of calendar date and count is 0, set distance = 1",
+    "past_or_same_day": "Not an upcoming warning"
+  },
+  "forbidden_copy": [
+    "do not open",
+    "do not add",
+    "wait",
+    "exit",
+    "buy",
+    "sell",
+    "initiate",
+    "hold",
+    "avoid",
+    "reduce"
+  ],
+  "reason_templates": {
+    "earnings": "Earnings event is within {distance} trading sessions.",
+    "ex_date": "Ex-date is within {distance} trading sessions."
+  }
+}

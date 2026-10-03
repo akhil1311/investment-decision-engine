@@ -1,0 +1,13 @@
+{
+  "$id": "security.schema.json",
+  "type": "object",
+  "required": ["security_id", "nse_symbol", "isin", "name"],
+  "additionalProperties": false,
+  "properties": {
+    "security_id": { "type": "string" },
+    "nse_symbol": { "type": "string" },
+    "isin": { "type": "string" },
+    "name": { "type": "string" }
+  },
+  "forbidden_fields": ["date"]
+}
