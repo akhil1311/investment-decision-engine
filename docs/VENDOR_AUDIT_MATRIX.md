@@ -153,5 +153,5 @@ Record the go / no-go here when the matrix is complete:
 | 2026-10-03 | NSE + EODHD public passes; broad Track 1 done | NSE, EODHD | NSE 12 PARTIAL(strong); EODHD 20 PASS-candidate; next focused Row 15 — see VENDOR_AUDIT_LIVE |
 | 2026-10-03 | Row 15 focused: S&P → PASS-candidate; do not weaken row 15 | S&P (+ EventVestor / WSH / Aiera side board) | Global Events delivery-date PIT; India sample next; PASS still 0; no adapter/engine change |
 | 2026-10-03 | Track 1 public research clean stop | — | Next: S&P India sample → evidence-log → Row 15 decision; map delivery to EOD `available_at` without unsupported timing assumptions; no more broad vendor search |
-| 2026-10-03 | Milestone locked; wait for S&P sample | S&P Global Events | No further public surfing / no v0.1.0 changes; mechanical Row 15 eval only when sample arrives; PASS = 0 |
+| 2026-10-03 | Milestone locked; wait for S&P sample | S&P Global Events | No further public surfing / no v0.1.0 changes; mechanical Row 15 eval only when sample arrives; PASS = 0; **do not move matrix cells until evidence arrives** |
 | | | | |
