@@ -1,5 +1,8 @@
 # Vendor audit checklist
 
+Operational Pass/Fail worksheet for Track A: [VENDOR_AUDIT_MATRIX.md](VENDOR_AUDIT_MATRIX.md).  
+Requirements freeze: [DATA_PROMOTION_V1.md](DATA_PROMOTION_V1.md).
+
 ## Kill criteria
 
 - As-of D silently uses later restatements

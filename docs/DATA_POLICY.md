@@ -2,11 +2,13 @@
 
 Fixture layout and adversarial ids: [FIXTURES_AND_TESTS.md](FIXTURES_AND_TESTS.md). Schemas: `config/data-contract/`.
 
+Real-data promotion (Track A, after tag `v0.1.0`): [DATA_PROMOTION_V1.md](DATA_PROMOTION_V1.md) and [VENDOR_AUDIT_MATRIX.md](VENDOR_AUDIT_MATRIX.md). Adapter must emit these same schemas; engines stay frozen.
+
 ## Canonical sources for V1
 
 - Schema-valid JSON fixtures under `data/fixtures/`
 - Optional one-time seed from POC local `data/` snapshots (copy data, not engines)
-- Later: paid/normalized vendor adapter emitting the same PIT schema
+- Later: paid/normalized vendor adapter emitting the same PIT schema (Track A)
 
 ## Forbidden
 

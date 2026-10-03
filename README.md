@@ -47,6 +47,15 @@ Open the UI, pick one of the eight research securities, optionally set held/not-
 | 8 | [docs/RESEARCH_PROTOCOL.md](docs/RESEARCH_PROTOCOL.md) | When (not) to unlock the gate |
 | 9 | [docs/VENDOR_AUDIT.md](docs/VENDOR_AUDIT.md) | Kill criteria before production ingest |
 
+### Track A — real-data promotion (post `v0.1.0`)
+
+Work on branch `data-promotion-v1`. Do not rewrite engines for a vendor.
+
+| Doc | What you learn |
+|-----|----------------|
+| [docs/DATA_PROMOTION_V1.md](docs/DATA_PROMOTION_V1.md) | What “real-data compatible” means; phased plan |
+| [docs/VENDOR_AUDIT_MATRIX.md](docs/VENDOR_AUDIT_MATRIX.md) | Pass/Fail worksheet before any adapter code |
+
 Machine-readable thresholds and schemas live under `config/` (label specs, decision vocabulary, data-contract). Prefer those for exact numbers; prefer the docs above for intent and wiring.
 
 ## Repository map

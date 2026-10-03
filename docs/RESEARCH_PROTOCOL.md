@@ -2,6 +2,8 @@
 
 Inherit lock / seal / holdout discipline from POC-001 methodology.
 
+**After `v0.1.0`:** complete Track A data promotion ([DATA_PROMOTION_V1.md](DATA_PROMOTION_V1.md)) before opening a separate Track B decision-research thread. Do not retune V1 thresholds on the eight names; do not enable the decision gate from data work alone.
+
 ## Rules
 
 - Freeze specs before looking at outcomes
