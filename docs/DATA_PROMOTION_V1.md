@@ -179,8 +179,8 @@ Acceptance for an adapter (future phase):
 | Phase | Deliverable | Gate |
 |-------|-------------|------|
 | 1 | This doc + [VENDOR_AUDIT_MATRIX](VENDOR_AUDIT_MATRIX.md) | **Current** |
-| 2 | Completed vendor matrix for ≥1 candidate; kill unsuitable sources ([VENDOR_AUDIT_LIVE.md](VENDOR_AUDIT_LIVE.md) in progress) | No code against failed rows |
-| 3 | Adapter emitting canonical JSON for eight names + Nifty (limited window) | Schema + PIT validator green |
+| 2 | Vendor-to-domain mapping justified by evidence ([VENDOR_AUDIT_LIVE.md](VENDOR_AUDIT_LIVE.md); domain split allowed) | No adapter until mapping justified; silence from one vendor does not pause others |
+| 3 | Adapter(s) emitting canonical JSON for eight names + Nifty (limited window) | Schema + PIT validator green |
 | 4 | `validate-pit-store` (or equivalent) rejects listed failure modes | Bad vendor data never reaches engines |
 | 5 | Historical assessment replay for sample `as_of` pairs | Deterministic cards + `data_version` |
 | 6 | Replay harness (`npm run replay -- --symbol … --start … --end …`) | Research dataset of assessments, gate still closed |

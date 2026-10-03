@@ -1,10 +1,54 @@
 # Vendor audit — live worksheet (Track A)
 
-**Status:** Public-documentation research only — **no purchase, no adapter code**  
+**Status:** Parallel public-doc research + optional vendor clarification — **no purchase, no adapter code**  
 **Frozen criteria:** [VENDOR_AUDIT_MATRIX.md](VENDOR_AUDIT_MATRIX.md) rows 1–22  
 **Requirements:** [DATA_PROMOTION_V1.md](DATA_PROMOTION_V1.md)  
-**Audit date:** 2026-10-03  
+**Audit date:** 2026-10-03 (ongoing)  
 **Method:** Current public product pages / developer docs; marks stay conservative until India samples + contracts
+
+## What is already decided vs what is not
+
+**Already clear (does not wait on any salesperson):**
+
+```
+Vendor source(s)
+      ↓
+Adapter(s)
+      ↓
+Frozen canonical PIT schemas   ← v0.1.0
+      ↓
+PIT store
+      ↓
+Existing V1 engines            ← unchanged
+```
+
+**Still unresolved — evidence-driven mapping, not architecture:**
+
+```
+                    ┌── Market      → ?
+Canonical PIT  ←────┼── CA          → ?
+                    ├── Fundamentals → ?
+                    └── Events      → ?
+```
+
+Question is **not** “can one vendor pass everything?”  
+Question is: **can we construct a combination of sources that collectively satisfies the frozen PIT contract?**
+
+Final gate wording: **Final vendor-to-domain mapping must be justified by evidence** (before any adapter implementation).
+
+### Parallel tracks (neither blocks the other)
+
+```
+Track 1 — Public research          Track 2 — Clarification (optional)
+     ↓                                    ↓
+Fill rows 1–22 from public docs      Ask vendor only to resolve UNKNOWN
+     ↓                                    ↓
+PASS-candidate / PARTIAL / UNKNOWN   response → evaluate; silence → stay UNKNOWN
+```
+
+Vendor email is a tool to resolve UNKNOWN — **not** a mandatory pause on Track 1.
+
+---
 
 ## Audit set (not a ranking)
 
@@ -46,10 +90,14 @@ Can it satisfy our PIT contract?   ← rows 6, 11, 12, 15, 20 first
 | # | Requirement | LSEG | S&P | Bloomberg | FactSet | NSE | EODHD |
 |---|-------------|------|-----|-----------|---------|-----|-------|
 | 6 | CA announcement / availability timing (`available_at`) | PARTIAL / UNKNOWN | PARTIAL / UNKNOWN | UNKNOWN / PARTIAL | UNKNOWN | PARTIAL | UNKNOWN |
-| 11 | Historical revisions (original + restatement) | PASS-candidate | PASS-candidate | PARTIAL → investigate | PARTIAL → investigate | UNKNOWN | UNKNOWN |
-| 12 | Filing/publication → `reported_at` / feed `available_at` | PARTIAL | PARTIAL | PARTIAL → investigate | PARTIAL | PARTIAL / UNKNOWN | PARTIAL / UNKNOWN |
-| 15 | Event historical `available_at` / calendar knowability | UNKNOWN | UNKNOWN | UNKNOWN / PARTIAL | UNKNOWN | UNKNOWN | UNKNOWN |
+| 11 | Historical revisions (original + restatement) | PASS-candidate | PASS-candidate† | PARTIAL → investigate | PARTIAL → investigate | UNKNOWN | UNKNOWN |
+| 12 | Filing/publication → `reported_at` / feed `available_at` | PARTIAL | PARTIAL (strong model)‡ | PARTIAL → investigate | PARTIAL | PARTIAL / UNKNOWN | PARTIAL / UNKNOWN |
+| 15 | Event historical `available_at` / calendar knowability | UNKNOWN | PARTIAL → investigate§ | UNKNOWN / PARTIAL | UNKNOWN | UNKNOWN | UNKNOWN |
 | 20 | License permits intended personal research + local store | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN — contractual | UNKNOWN |
+
+† Compustat marketplace: PIT changes since 1987, but “alongside change date in **North America only**” — India Snapshot depth must be confirmed; do not treat as PASS.  
+‡ Capital IQ Financials publicly documents **FilingDate** and **Financial Instance Date** (first delivered) — dual-timestamp model maps well to our ladder; India sample still required.  
+§ Global Events dataset claims **Point in Time history from August 2018** — better public signal than LSEG on knowability, still not India-proven PASS.
 
 ### Evidence notes (critical rows)
 
@@ -67,12 +115,34 @@ Sources (public): [LSEG PIT / backtest](https://www.lseg.com/en/data-analytics/a
 
 **Domain observation (LSEG):** Fundamentals PIT/revisions/availability look more promising than Events knowability; CA has announcement/ex/factor strength with a PIT-availability gap. Strengthens **domain-split** likelihood — does not authorize purchase or adapter.
 
-#### S&P Global
-- **11 PASS-candidate:** Compustat marketed with PIT snapshots from ~1987; original values retained with subsequent changes; Snapshot/PIT products described via S&P/WRDS materials. Sources: [Compustat Financials marketplace](https://www.marketplace.spglobal.com/en/datasets/compustat-financials-(8)), [Compustat brochure](https://www.spglobal.com/marketintelligence/en/documents/compustat-brochure_digital.pdf).
-- **12 PARTIAL:** Capital IQ / Compustat delivery / effective-through and “financial instance” style dates are strong for `available_at`; issuer filing-time mapping for India still needs confirmation. Note: some Compustat PIT detail is described as stronger for North America — **India depth must be confirmed**.
-- **6 PARTIAL/UNKNOWN:** Announcement-date CA datasets exist in historical materials; feed `available_at` ≠ announcement date still open.
-- **15 UNKNOWN**
-- **20 UNKNOWN**
+#### S&P Global — public-doc pass deepened (2026-10-03); **no critical row → PASS**
+
+| Row | Cell | What public evidence establishes | What remains missing |
+|-----|------|----------------------------------|----------------------|
+| 11 | PASS-candidate | Compustat: PIT snapshots / original retained + subsequent changes; Capital IQ Premium Financials Snapshot = all filings + PIT observations. Sources: [Compustat Financials](https://www.marketplace.spglobal.com/en/datasets/compustat-financials-(8)), [Capital IQ Financials](https://www.marketplace.spglobal.com/en/datasets/s-p-capital-iq-financials-(10)), [Compustat brochure](https://www.spglobal.com/marketintelligence/en/documents/compustat-brochure_digital.pdf) | **India path:** marketplace PIT note “alongside change date in North America only”; WRDS Snapshot materials often NA-centric — confirm India revision/PIT SKU with sample |
+| 12 | PARTIAL (strong model) | Capital IQ: **Financial Instance Date** = date/time first delivered; PIT details include filing dates + product delivery date; thought leadership distinguishes filing/press-release awareness vs DB input. [CIQ Financials](https://www.marketplace.spglobal.com/en/datasets/s-p-capital-iq-financials-(10)), [PIT vs lagged PDF](https://www.spglobal.com/content/dam/spglobal/mi/en/documents/general/sp-capitaliq-quantamental-point-in-time-vs-lagged-fundamentals.pdf) | India instance of dual fields; do not collapse FilingDate vs InstanceDate |
+| 6 | PARTIAL / UNKNOWN | Corporate Tracker / entity CA history; third-party CA sourcing mentioned in Compustat materials | Historical **first feed availability** ≠ announcement/ex for India actions |
+| 15 | PARTIAL → investigate | [Global Events](https://www.marketplace.spglobal.com/en/datasets/global-events-(11)): past+future events, history to ~2003; **PIT history from Aug 2018** claimed | Prove calendar knowability for NSE names (`as_of` T1 UNKNOWN → T2 KNOWN); pre-2018 gap |
+| 20 | UNKNOWN | Xpressfeed Loader / Web Service Downloader load into **customer** DB/local dir (technical local processing). License: order-specific; FastTrack-style terms restrict redistribution — not a substitute for research-extract clause | Explicit private-research + offline replay clause |
+
+**Broader rows (public, provisional — not critical-gate):**
+
+| # | S&P mark | Note |
+|---|----------|------|
+| 1 | PARTIAL | Compustat includes daily/monthly market data via aggregator — not presumed India EOD authority |
+| 2 | UNKNOWN | Turnover/INR not established from these pages |
+| 3 | UNKNOWN | Nifty price index not established here |
+| 4–5 | PARTIAL | Splits/dividends in market data; bonus/ex-date semantics need CA product confirmation |
+| 7–9 | UNKNOWN / PARTIAL | Factors and unsupported CA typing not proven for our adjust rules |
+| 10 | PASS-candidate | Deep standardized + statement history (global) |
+| 13 | PARTIAL | Standardized periods/consolidation exist; map to our duration/unit enums with sample |
+| 14 | PARTIAL | Global Events past+future earnings-related events |
+| 16–17 | PARTIAL | Identifier history / inactive preservation claimed (Corporate Tracker / inactive flags) |
+| 18–19 | UNKNOWN | India session calendar not proven from MI fundamentals pages |
+| 21 | PASS-candidate | Official S&P products — not yfinance/nsepython |
+| 22 | PARTIAL | Adapter must still emit frozen schemas; engines unchanged |
+
+**Domain observation (S&P):** Fundamentals (+ CIQ dual timestamps) look strongest; Events have a clearer public PIT claim than LSEG (from Aug 2018) but India unproven; Market/Nifty/turnover likely **not** the reason to pick S&P alone — domain split with NSE/LSEG market still plausible.
 
 #### Bloomberg
 - **11 PARTIAL → investigate:** [Company Financials, Estimates and Pricing Point-in-Time](https://professional.bloomberg.com/products/data/enterprise-catalog/cofi/) and related research-data pages claim historical PIT actuals for 100k+ active/inactive companies. Exact original-vs-restatement retrieval semantics for Indian issuers not verified at our contract level.
@@ -112,7 +182,7 @@ Sources (public): [LSEG PIT / backtest](https://www.lseg.com/en/data-analytics/a
 ```
                     Market   CA           Fundamentals      Events              License
 LSEG                  ?    promising†     PASS-cand*        knowability gap     UNKNOWN
-S&P                   ?       ?           PASS-cand*        ?                   UNKNOWN
+S&P                weak?   partial        PASS-cand*††      PARTIAL→invest§    UNKNOWN
 Bloomberg             ?       ?           investigate       ?                   UNKNOWN
 FactSet               ?       ?           investigate       ?                   UNKNOWN
 NSE                strong?  partial       weak/?            ?                   UNKNOWN
@@ -120,9 +190,13 @@ EODHD              control  weak          FAIL-as-sole      weak                
 ```
 
 \*PASS-candidate on public docs only; India sample required.  
-†CA: announcement/ex/factor/deltas documented; row-6 feed `available_at` still open.
+†CA: announcement/ex/factor/deltas documented; row-6 feed `available_at` still open.  
+††India Compustat PIT change-date caveat.  
+§Global Events PIT from Aug 2018 claimed — not PASS.
 
-Allowed outcome under frozen matrix: **domain split** (e.g. NSE/LSEG market+CA + S&P/LSEG/Bloomberg/FactSet fundamentals + separate events) → multiple adapters → one canonical PIT store. Prefer one source only if it truly clears all critical rows.
+**Mapping rule:** A market vendor need not pass row 11; a fundamentals vendor need not supply Nifty. Domain split is first-class.
+
+Allowed outcome: e.g. NSE/LSEG → market+CA, S&P/LSEG → fundamentals, S&P Global Events or other → events — **only after** each chosen domain’s critical rows are evidence-justified.
 
 ---
 
@@ -184,7 +258,7 @@ Does the proposed subscription permit a private researcher to retain a local his
 
 Order reflects PIT-research plausibility + India-native domain role — **not** a quality ranking.
 
-**Do not pay** until rows **6, 11, 12, 15, 20** have evidence (sample or contractual language). Then fill remaining matrix rows.
+**Do not pay** and **do not start adapters** until **vendor-to-domain mapping** is justified: for each assigned domain, that source’s critical rows for that domain have evidence (sample and/or contract where required). Silence from LSEG does **not** pause S&P/Bloomberg/FactSet public audit.
 
 ---
 
@@ -240,20 +314,26 @@ For each claim that might move a matrix cell, record a row. Sales “yes we supp
 | 2026-10-03 | LSEG | 6 | Announcement/ex/record/effective dates; announced-not-effective + delta I/U/D delivery | public_doc / dev_doc | LSEG Developers corporate actions; DataScope Plus CA docs | unknown | no (first feed availability unproven) | no | no | **6 stays PARTIAL/UNKNOWN** |
 | 2026-10-03 | LSEG | 15 | Historical earnings & corporate events calendar from 1999 (large coverage) | public_doc | LSEG Earnings & Corporate Events Calendar product materials | unknown | no (event_date ≠ knowability) | no | no | **15 stays UNKNOWN** |
 | 2026-10-03 | LSEG | 20 | Local download technically supported (DaaS); licensing/Workspace restrict use; website ToS ≠ data contract | public_doc / dev_doc | LSEG Developers DaaS; platform licensing docs; LSEG website terms | unknown | n/a | no | no | **20 stays UNKNOWN** |
+| 2026-10-03 | S&P | 11 | Compustat/CIQ Snapshot retain original+changes; PIT since 1987; NA change-date caveat | public_doc | Compustat + CIQ Financials marketplace pages | unknown | partial | no | no | **11 stays PASS-candidate** |
+| 2026-10-03 | S&P | 12 | FilingDate + Financial Instance Date (first delivered) documented | public_doc | CIQ Financials marketplace; PIT vs lagged fundamentals PDF | unknown | partial (strong model) | no | no | **12 stays PARTIAL (strong model)** |
+| 2026-10-03 | S&P | 6 | Corporate Tracker / CA entity history; feed first-availability unproven | public_doc | Compustat materials | unknown | no | no | no | **6 stays PARTIAL/UNKNOWN** |
+| 2026-10-03 | S&P | 15 | Global Events: history + **PIT from Aug 2018** claimed | public_doc | S&P Global Events marketplace | unknown | partial | no | no | **15 UNKNOWN → PARTIAL → investigate** |
+| 2026-10-03 | S&P | 20 | Xpressfeed loads to customer DB (technical); order license required | public_doc | Xpressfeed Loader / brochure; S&P license T&Cs | unknown | n/a | no | no | **20 stays UNKNOWN** |
 
-**LSEG public-doc ceiling reached.** Further general web search should not move cells. Next evidence: India-specific sample + contractual response. Do not send credentials, API keys, or confidential contracts into chat — sanitized sample + relevant clause wording only.
+**LSEG public-doc ceiling reached** for general search; clarification/sample optional in parallel.  
+**S&P public-doc pass recorded**; next Track 1 targets: Bloomberg, then FactSet. Do not send credentials/API keys/confidential contracts into chat — sanitized sample + clause wording only.
 
-### LSEG cell summary (after public-doc pass)
+### Critical-row summary (after LSEG + S&P public passes)
 
 ```
-Row 6   PARTIAL / UNKNOWN
-Row 11  PASS-candidate
-Row 12  PARTIAL
-Row 15  UNKNOWN
-Row 20  UNKNOWN
+           LSEG                 S&P
+6          PARTIAL/UNKNOWN      PARTIAL/UNKNOWN
+11         PASS-candidate       PASS-candidate (†India PIT caveat)
+12         PARTIAL              PARTIAL (strong model)
+15         UNKNOWN              PARTIAL → investigate
+20         UNKNOWN              UNKNOWN
 
-PASS            0
-PASS-candidate  1 (row 11 only)
+PASS (any vendor, critical)     0
 ```
 
 ---
@@ -263,17 +343,20 @@ PASS-candidate  1 (row 11 only)
 | Date | Decision | Notes |
 |------|----------|-------|
 | 2026-10-03 | Audit set frozen; public-doc preliminary marks recorded | No vendor selected; no purchase; no adapter |
-| 2026-10-03 | Evidence-log schema + temporal ladder locked | Next: LSEG questionnaire + India sample request |
-| 2026-10-03 | LSEG public-doc pass recorded; no cell → PASS | Fundamentals more promising than events knowability; domain-split still open; **hard gate: no purchase/adapter until matrix evidence** |
+| 2026-10-03 | Evidence-log schema + temporal ladder locked | LSEG questionnaire optional (Track 2), not a project pause |
+| 2026-10-03 | LSEG public-doc pass recorded; no cell → PASS | Fundamentals > events knowability for LSEG |
+| 2026-10-03 | Process reframed: architecture fixed; **vendor-to-domain mapping** is the evidence gate | Parallel Track 1 + Track 2 |
+| 2026-10-03 | S&P public-doc pass; row 15 → PARTIAL→investigate | Dual FilingDate/InstanceDate noted; India Compustat PIT caveat; next Bloomberg |
 
 ## Next engineering gate (still future)
 
-Only after architecture choice from evidence:
+Only after **vendor-to-domain mapping** is justified by evidence:
 
 ```
-ONE source passes everything  →  one adapter
-OR
-domain-split sources          →  N adapters → one canonical PIT store
+chosen Market source  ─┐
+chosen CA source      ─┼→ Adapter(s) → frozen schemas → PIT store → V1 engines
+chosen Fundamentals   ─┤
+chosen Events source  ─┘
 ```
 
 Then: schema-valid extracts → `validate-pit-store` → historical `assess()` replay — engines unchanged from `v0.1.0`.

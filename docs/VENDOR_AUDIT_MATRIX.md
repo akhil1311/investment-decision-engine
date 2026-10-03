@@ -147,5 +147,6 @@ Record the go / no-go here when the matrix is complete:
 | Date | Decision | Candidates | Rationale |
 |------|----------|------------|-----------|
 | 2026-10-03 | Preliminary public-doc audit recorded | LSEG, S&P, Bloomberg, FactSet, NSE, EODHD | Critical rows remain unresolved; questionnaire + India samples next; no purchase/adapter |
-| 2026-10-03 | LSEG public-doc pass deepened | LSEG | Cells unchanged (11 PASS-candidate; 6/12/15/20 not PASS); sample+contract next — see VENDOR_AUDIT_LIVE |
+| 2026-10-03 | LSEG public-doc pass deepened | LSEG | Cells unchanged (11 PASS-candidate; 6/12/15/20 not PASS); sample+contract optional Track 2 |
+| 2026-10-03 | Gate = vendor-to-domain mapping; S&P public pass | S&P | Row 15 → PARTIAL→investigate; 11/12 caveats recorded; next Bloomberg — see VENDOR_AUDIT_LIVE |
 | | | | |
