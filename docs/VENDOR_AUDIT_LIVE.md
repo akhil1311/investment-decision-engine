@@ -550,6 +550,7 @@ PASS (any vendor, critical)     0
 | 2026-10-03 | NSE + EODHD public passes; six-candidate Track 1 complete | NSE 12 PARTIAL(strong); EODHD 20 PASS-candidate; **next = focused Row 15** |
 | 2026-10-03 | Row 15 focused pass: S&P Global Events → **PASS-candidate** | Delivery-date PIT (Aug 2018+); C no longer working assumption; specialists noted; **next = India sample**; engines/specs unchanged |
 | 2026-10-03 | Track 1 public research **clean stop** | Next milestone wording: map delivery → frozen EOD `available_at` without unsupported timing assumptions; five sample proofs; date-only ≠ true 15:30; mechanical audit vs frozen criteria |
+| 2026-10-03 | Milestone **locked**; no further public-vendor surfing until evidence | Chain: India → revisions → delivery/availability → T1/T2 replay → EOD `available_at` map → Row 15 PASS/PARTIAL/UNKNOWN. Next input = S&P sample only. v0.1.0 / engines / specs unchanged. PASS = 0 |
 
 ## Next engineering gate (still future)
 
