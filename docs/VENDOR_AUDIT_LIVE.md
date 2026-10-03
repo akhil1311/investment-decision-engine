@@ -53,12 +53,19 @@ Can it satisfy our PIT contract?   ← rows 6, 11, 12, 15, 20 first
 
 ### Evidence notes (critical rows)
 
-#### LSEG
-- **11 PASS-candidate:** Public materials describe PIT fundamentals retaining preliminary, finalized, restated figures, timestamped to when available; as-reported catalogue exists. Sources: [LSEG PIT / backtest description](https://www.lseg.com/en/data-analytics/asset-management-solutions/portfolio-management/backtest-your-portfolio-performance), [Fundamentals As Reported](https://www.lseg.com/en/data-catalogue/company-data/company-fundamentals/fundamentals-as-reported), [quant research brochure](https://www.lseg.com/content/dam/data-analytics/en_us/documents/brochures/data-for-quant-research.pdf).
-- **12 PARTIAL:** “Timestamped to exact date/time information was made available” is documented; separate issuer `reported_at` vs feed availability still needs vendor confirmation for India.
-- **6 PARTIAL/UNKNOWN:** Developer/community materials expose announcement / ex-date / adjustment factor style fields; **feed-level historical `available_at` independent of announcement date** not established publicly for our reconstruct question.
-- **15 UNKNOWN:** Historical corporate-events calendars exist (incl. Asia-Pacific in public descriptions); historical “when did the calendar value become knowable?” not established.
-- **20 UNKNOWN:** Contract required.
+#### LSEG — public-doc pass complete (2026-10-03); **no critical row → PASS**
+
+| Row | Cell (unchanged) | What public evidence establishes | What remains missing |
+|-----|------------------|----------------------------------|----------------------|
+| 11 | PASS-candidate | PIT vs non-PIT: preliminary / finalized / restated retained; timestamped to when available; as-reported preserves disclosures/amendments; quant docs: point date = availability in Company Fundamentals feed; daily points since Aug 2006 | India eight-name extract path + sample proving T1 original / T2 restatement |
+| 12 | PARTIAL | Exact date/time “made available” claimed; feed point-date semantics; developer fields such as `TR.ISOriginalAnnouncementDate`, `TR.ISStatementLastUpdatedDate` discussed | Dual map `reported_at` + vendor `available_at` + revision chain + India; note: some date fields inconsistently populated across reporting-state histories (dev community → content investigation) |
+| 6 | PARTIAL / UNKNOWN | CA materials distinguish declaration/announcement, ex, record, effective/payment; DataScope Plus: announced-not-yet-effective events; delta insert/update/delete ~15-min | Historical **first feed availability** of action/terms independent of announcement/ex-date for as_of knowledge reconstruct |
+| 15 | UNKNOWN | Earnings & Corporate Events Calendar: large history from 1999, many companies/countries/event types | `event_date` history ≠ historical knowability (`as_of` Sep 1 UNKNOWN → Sep 5 KNOWN) |
+| 20 | UNKNOWN | DaaS: files can download to local infra (technical); Platform/Workspace licensing restricts use/share/redistribute; website terms ≠ enterprise dataset contract | Explicit clause: private local historical extract for offline PIT reconstruction/replay |
+
+Sources (public): [LSEG PIT / backtest](https://www.lseg.com/en/data-analytics/asset-management-solutions/portfolio-management/backtest-your-portfolio-performance), [Fundamentals As Reported](https://www.lseg.com/en/data-catalogue/company-data/company-fundamentals/fundamentals-as-reported), [quant research brochure](https://www.lseg.com/content/dam/data-analytics/en_us/documents/brochures/data-for-quant-research.pdf), LSEG Developers (corporate actions / DataScope / DaaS / licensing), LSEG Developer Community (financial date fields).
+
+**Domain observation (LSEG):** Fundamentals PIT/revisions/availability look more promising than Events knowability; CA has announcement/ex/factor strength with a PIT-availability gap. Strengthens **domain-split** likelihood — does not authorize purchase or adapter.
 
 #### S&P Global
 - **11 PASS-candidate:** Compustat marketed with PIT snapshots from ~1987; original values retained with subsequent changes; Snapshot/PIT products described via S&P/WRDS materials. Sources: [Compustat Financials marketplace](https://www.marketplace.spglobal.com/en/datasets/compustat-financials-(8)), [Compustat brochure](https://www.spglobal.com/marketintelligence/en/documents/compustat-brochure_digital.pdf).
@@ -103,16 +110,17 @@ Can it satisfy our PIT contract?   ← rows 6, 11, 12, 15, 20 first
 ## Domain suitability sketch (evidence so far — all provisional)
 
 ```
-                    Market   CA    Fundamentals   Events   License
-LSEG                  ?       ?     PASS-cand*      ?        ?
-S&P                   ?       ?     PASS-cand*      ?        ?
-Bloomberg             ?       ?     investigate     ?        ?
-FactSet               ?       ?     investigate     ?        ?
-NSE                strong?  partial   weak/?        ?     UNKNOWN
-EODHD              control  weak    FAIL-as-sole   weak      ?
+                    Market   CA           Fundamentals      Events              License
+LSEG                  ?    promising†     PASS-cand*        knowability gap     UNKNOWN
+S&P                   ?       ?           PASS-cand*        ?                   UNKNOWN
+Bloomberg             ?       ?           investigate       ?                   UNKNOWN
+FactSet               ?       ?           investigate       ?                   UNKNOWN
+NSE                strong?  partial       weak/?            ?                   UNKNOWN
+EODHD              control  weak          FAIL-as-sole      weak                ?
 ```
 
-\*PASS-candidate on public docs only; India sample required.
+\*PASS-candidate on public docs only; India sample required.  
+†CA: announcement/ex/factor/deltas documented; row-6 feed `available_at` still open.
 
 Allowed outcome under frozen matrix: **domain split** (e.g. NSE/LSEG market+CA + S&P/LSEG/Bloomberg/FactSet fundamentals + separate events) → multiple adapters → one canonical PIT store. Prefer one source only if it truly clears all critical rows.
 
@@ -134,11 +142,34 @@ Do your financial records expose both the issuer filing/publication timestamp an
 ### Row 15
 For historical earnings calendars, can you reconstruct what earnings date was knowable at each historical timestamp, including date changes/revisions? Is there a historical record of when each calendar value became available?
 
-### Practical sample request (most valuable)
-Can you provide a small sample containing **RELIANCE, HDFCBANK, or INFY** demonstrating these fields over an actual revision and/or event history?
+### Practical sample request (most valuable) — sharpened gaps
+
+Please provide a small extract for **RELIANCE, HDFCBANK, and/or INFY** (sanitized OK; no credentials) covering:
+
+**Fundamentals (rows 11 / 12)** — one real revision case:
+
+| | Need |
+|--|------|
+| T1 | Original statement values visible at timestamp T1 |
+| T2 | Restated/revised values become visible at T2 |
+| Fields | Underlying timestamps / version ids that map to our `reported_at`, vendor `available_at`, `source_version` |
+
+**Corporate actions (row 6)** for at least one action:
+
+- announcement timestamp  
+- **feed-availability** timestamp (first knowable in feed — not only announcement/ex)  
+- ex-date  
+- adjustment factor  
+- revision/update history if any  
+
+**Earnings calendar (row 15)** for at least one date change or first appearance:
+
+- calendar record as of T1  
+- calendar record as of T2  
+- timestamp when the date first appeared or changed  
 
 ### License / local store (row 20)
-Does the proposed subscription permit a private researcher to retain a local historical extract for offline PIT reconstruction and assessment replay (not redistribution)? Please cite the contract clause.
+Does the proposed subscription permit a private researcher to retain a local historical extract for offline PIT reconstruction and assessment replay (not redistribution)? Please cite the **contract clause** (not website terms of use). Explicitly address: local retention, offline replay, private research, historical extract.
 
 ---
 
@@ -204,7 +235,26 @@ For each claim that might move a matrix cell, record a row. Sales “yes we supp
 | Date | Vendor | Row | Claim | Evidence type | Exact source | India? | PIT semantics? | Sample? | Contract? | Cell impact |
 |------|--------|-----|-------|---------------|--------------|--------|----------------|---------|-----------|-------------|
 | 2026-10-03 | (all) | 6/11/12/15/20 | Public-doc preliminary marks only | public_doc | See evidence notes above | unknown | partial/no | no | no | No PASS; PASS-candidate where noted |
-| | | | | | | | | | | |
+| 2026-10-03 | LSEG | 11 | PIT retains preliminary/final/restated; point date = feed availability; as-reported includes amendments | public_doc | LSEG PIT/backtest page; As Reported catalogue; quant research brochure (Company Fundamentals PIT) | unknown | partial (product-level yes; India path no) | no | no | **11 stays PASS-candidate** |
+| 2026-10-03 | LSEG | 12 | Exact availability timestamp claimed; fields like TR.ISOriginalAnnouncementDate / TR.ISStatementLastUpdatedDate exist; some dates inconsistently populated | public_doc / dev_doc | LSEG PIT materials; LSEG Developer Community financial date threads | unknown | partial | no | no | **12 stays PARTIAL** |
+| 2026-10-03 | LSEG | 6 | Announcement/ex/record/effective dates; announced-not-effective + delta I/U/D delivery | public_doc / dev_doc | LSEG Developers corporate actions; DataScope Plus CA docs | unknown | no (first feed availability unproven) | no | no | **6 stays PARTIAL/UNKNOWN** |
+| 2026-10-03 | LSEG | 15 | Historical earnings & corporate events calendar from 1999 (large coverage) | public_doc | LSEG Earnings & Corporate Events Calendar product materials | unknown | no (event_date ≠ knowability) | no | no | **15 stays UNKNOWN** |
+| 2026-10-03 | LSEG | 20 | Local download technically supported (DaaS); licensing/Workspace restrict use; website ToS ≠ data contract | public_doc / dev_doc | LSEG Developers DaaS; platform licensing docs; LSEG website terms | unknown | n/a | no | no | **20 stays UNKNOWN** |
+
+**LSEG public-doc ceiling reached.** Further general web search should not move cells. Next evidence: India-specific sample + contractual response. Do not send credentials, API keys, or confidential contracts into chat — sanitized sample + relevant clause wording only.
+
+### LSEG cell summary (after public-doc pass)
+
+```
+Row 6   PARTIAL / UNKNOWN
+Row 11  PASS-candidate
+Row 12  PARTIAL
+Row 15  UNKNOWN
+Row 20  UNKNOWN
+
+PASS            0
+PASS-candidate  1 (row 11 only)
+```
 
 ---
 
@@ -213,7 +263,8 @@ For each claim that might move a matrix cell, record a row. Sales “yes we supp
 | Date | Decision | Notes |
 |------|----------|-------|
 | 2026-10-03 | Audit set frozen; public-doc preliminary marks recorded | No vendor selected; no purchase; no adapter |
-| 2026-10-03 | Evidence-log schema + temporal ladder locked | Next: LSEG questionnaire + India sample request; do not pay until critical rows have evidence |
+| 2026-10-03 | Evidence-log schema + temporal ladder locked | Next: LSEG questionnaire + India sample request |
+| 2026-10-03 | LSEG public-doc pass recorded; no cell → PASS | Fundamentals more promising than events knowability; domain-split still open; **hard gate: no purchase/adapter until matrix evidence** |
 
 ## Next engineering gate (still future)
 
