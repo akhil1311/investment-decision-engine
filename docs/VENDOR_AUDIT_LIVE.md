@@ -92,12 +92,12 @@ Can it satisfy our PIT contract?   ← rows 6, 11, 12, 15, 20 first
 | 6 | CA announcement / availability timing (`available_at`) | PARTIAL / UNKNOWN | PARTIAL / UNKNOWN | UNKNOWN / PARTIAL | UNKNOWN | PARTIAL | UNKNOWN |
 | 11 | Historical revisions (original + restatement) | PASS-candidate | PASS-candidate† | PARTIAL → investigate | PASS-candidate‖ | UNKNOWN | UNKNOWN |
 | 12 | Filing/publication → `reported_at` / feed `available_at` | PARTIAL | PARTIAL (strong model)‡ | PARTIAL → investigate | PARTIAL (strong model)‖ | PARTIAL (strong)¶ | PARTIAL / UNKNOWN |
-| 15 | Event historical `available_at` / calendar knowability | UNKNOWN | PARTIAL → investigate§ | UNKNOWN / PARTIAL | UNKNOWN / PARTIAL | UNKNOWN | UNKNOWN |
+| 15 | Event historical `available_at` / calendar knowability | UNKNOWN | **PASS-candidate**§ | UNKNOWN / PARTIAL | UNKNOWN / PARTIAL | UNKNOWN | UNKNOWN |
 | 20 | License permits intended personal research + local store | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN — contractual# | PASS-candidate** |
 
 † Compustat marketplace: PIT changes since 1987, but “alongside change date in **North America only**” — India Snapshot depth must be confirmed; do not treat as PASS.  
 ‡ Capital IQ Financials publicly documents **FilingDate** and **Financial Instance Date** (first delivered) — dual-timestamp model maps well to our ladder; India sample still required.  
-§ Global Events dataset claims **Point in Time history from August 2018** — better public signal than LSEG on knowability, still not India-proven PASS.  
+§ **Row 15 focused pass (2026-10-03):** Global Events — past+future events (incl. expected earnings), intraday delivery, **Point in Time = Yes**, PIT history from Aug 2018 based on **product delivery date** ([S&P Global Marketplace](https://www.marketplace.spglobal.com/en/datasets/global-events-(11))). Aligns with event_date + available_at/delivery + revisions — still not PASS: need India names + schema proving delivery-date granularity maps to EOD `available_at`.  
 ‖ FactSet Fundamentals PIT: Asia-Pacific coverage from 1999; API `/point-in-time` + `/periods` (first published / superseded, UTC); NON-RESTATED vs RESTATED — India eight-name sample still required for PASS.  
 ¶ NSE filings UI exposes Broadcast / Exchange Received / Exchange Dissemination times (incl. revised submissions) — exchange temporal trail, not yet mapped for eight names → not PASS.  
 # NSE: research/non-commercial recognized, but Market Data online-only; offline/removable media needs prior approval — do not infer local-store PASS.  
@@ -126,8 +126,18 @@ Sources (public): [LSEG PIT / backtest](https://www.lseg.com/en/data-analytics/a
 | 11 | PASS-candidate | Compustat: PIT snapshots / original retained + subsequent changes; Capital IQ Premium Financials Snapshot = all filings + PIT observations. Sources: [Compustat Financials](https://www.marketplace.spglobal.com/en/datasets/compustat-financials-(8)), [Capital IQ Financials](https://www.marketplace.spglobal.com/en/datasets/s-p-capital-iq-financials-(10)), [Compustat brochure](https://www.spglobal.com/marketintelligence/en/documents/compustat-brochure_digital.pdf) | **India path:** marketplace PIT note “alongside change date in North America only”; WRDS Snapshot materials often NA-centric — confirm India revision/PIT SKU with sample |
 | 12 | PARTIAL (strong model) | Capital IQ: **Financial Instance Date** = date/time first delivered; PIT details include filing dates + product delivery date; thought leadership distinguishes filing/press-release awareness vs DB input. [CIQ Financials](https://www.marketplace.spglobal.com/en/datasets/s-p-capital-iq-financials-(10)), [PIT vs lagged PDF](https://www.spglobal.com/content/dam/spglobal/mi/en/documents/general/sp-capitaliq-quantamental-point-in-time-vs-lagged-fundamentals.pdf) | India instance of dual fields; do not collapse FilingDate vs InstanceDate |
 | 6 | PARTIAL / UNKNOWN | Corporate Tracker / entity CA history; third-party CA sourcing mentioned in Compustat materials | Historical **first feed availability** ≠ announcement/ex for India actions |
-| 15 | PARTIAL → investigate | [Global Events](https://www.marketplace.spglobal.com/en/datasets/global-events-(11)): past+future events, history to ~2003; **PIT history from Aug 2018** claimed | Prove calendar knowability for NSE names (`as_of` T1 UNKNOWN → T2 KNOWN); pre-2018 gap |
+| 15 | **PASS-candidate** | [Global Events](https://www.marketplace.spglobal.com/en/datasets/global-events-(11)): past+future corporate events incl. expected earnings; **intraday** delivery; **Point in Time = Yes**; PIT history from **Aug 2018** based on **product delivery date** — not merely historical `event_date` | (1) India applicability (RELIANCE / HDFCBANK / INFY or equiv.); (2) schema/sample: delivery-date vs engine timestamp `available_at` lossless for EOD knowledge state; (3) revision-chain reconstruct (expected date changes over time) |
 | 20 | UNKNOWN | Xpressfeed Loader / Web Service Downloader load into **customer** DB/local dir (technical local processing). License: order-specific; FastTrack-style terms restrict redistribution — not a substitute for research-extract clause | Explicit private-research + offline replay clause |
+
+**S&P critical-row snapshot (after Row 15 focus):**
+
+| Row | S&P |
+|-----|-----|
+| 6 | PARTIAL / UNKNOWN |
+| 11 | PASS-candidate |
+| 12 | PARTIAL |
+| 15 | **PASS-candidate** |
+| 20 | UNKNOWN |
 
 **Broader rows (public, provisional — not critical-gate):**
 
@@ -146,7 +156,7 @@ Sources (public): [LSEG PIT / backtest](https://www.lseg.com/en/data-analytics/a
 | 21 | PASS-candidate | Official S&P products — not yfinance/nsepython |
 | 22 | PARTIAL | Adapter must still emit frozen schemas; engines unchanged |
 
-**Domain observation (S&P):** Fundamentals (+ CIQ dual timestamps) look strongest; Events have a clearer public PIT claim than LSEG (from Aug 2018) but India unproven; Market/Nifty/turnover likely **not** the reason to pick S&P alone — domain split with NSE/LSEG market still plausible.
+**Domain observation (S&P):** Fundamentals (+ CIQ dual timestamps) remain strong; **Events are now the first existing-candidate PASS-candidate for row 15** (delivery-date PIT, not event_date proxy). India sample + delivery→`available_at` map still required. Market/Nifty/turnover likely **not** the reason to pick S&P alone — domain split with NSE still plausible.
 
 #### Bloomberg — public-doc pass (2026-10-03); **no critical row → PASS**
 
@@ -203,43 +213,83 @@ Sources (public): [LSEG PIT / backtest](https://www.lseg.com/en/data-analytics/a
 
 ---
 
-## Domain suitability sketch (after full six-candidate public pass)
+## Domain suitability sketch (after Row 15 focused pass)
 
 ```
-                    Market      CA         Fundamentals      Events           License
-LSEG                  ?          ?           strong            ?              UNKNOWN
-S&P                   ?          ?           strong            ?§             UNKNOWN
-Bloomberg             ?          ?           investigate       ?              UNKNOWN
-FactSet               ?          ?           strong            ?              UNKNOWN
-NSE                 strong     partial       weak/?            ?         UNKNOWN (offline)
-EODHD               control    control       weak              weak      PASS-candidate**
+                    Market      CA         Fundamentals      Events                License
+LSEG                  ?          ?           strong            ?                   UNKNOWN
+S&P                   ?          ?           strong            PASS-candidate§     UNKNOWN
+Bloomberg             ?          ?           investigate       ?                   UNKNOWN
+FactSet               ?          ?           strong            ?                   UNKNOWN
+NSE                 strong     partial       weak/?            ?              UNKNOWN (offline)
+EODHD               control    control       weak              weak           PASS-candidate**
 ```
 
 **Convergence:**
 - **Fundamentals deeper validation:** LSEG · S&P · FactSet (Bloomberg still investigate)  
-- **Market / India exchange:** NSE increasingly useful (EOD + Price Return Nifty + filing timestamps)  
-- **Historical event knowledge (row 15):** hardest unresolved domain — **next audit focus**  
-- **License:** premium vendors UNKNOWN; NSE offline constraint; EODHD terms unusually clear for private store  
+- **Market / India exchange:** NSE (EOD + Price Return Nifty + filing timestamps)  
+- **Historical event knowledge (row 15):** no longer “does anyone have historical earnings dates?” — S&P Global Events is first existing-candidate **PASS-candidate**; specialists also exist (see below)  
+- **License:** premium vendors UNKNOWN; NSE offline constraint; EODHD terms clear for private store  
 
-**Insight:** Obtaining historical *values* may be easier than obtaining historical *information-state* metadata. Temporal ladder stays untouched.
+**Insight:** Historical *values* ≠ historical *information-state*. Temporal ladder stays untouched. **Do not weaken Row 15.**
 
 **Mapping rule:** A market vendor need not pass row 11; a fundamentals vendor need not supply Nifty. Domain split is first-class.
 
-### Next priority — stop broad vendor searching; focused Row 15
+### Row 15 focused investigation — result (2026-10-03)
 
-Broad Track 1 public passes for the six candidates are **complete enough**. Do not endlessly re-read generic docs.
+Bottleneck reframed: not historical earnings dates (many vendors have those), but **delivery-dated PIT calendar state**.
 
-**Focused investigation:** Does any candidate support **historical calendar-state reconstruction** (knowability), not merely historical earnings dates?
+#### Existing candidates (Row 15)
 
-Possible outcomes (do **not** choose C prematurely):
+| Vendor | Row 15 | Note |
+|--------|--------|------|
+| **S&P Global** | **PASS-candidate** | Global Events: future+past, intraday, PIT=Yes, history from Aug 2018 **based on product delivery date** |
+| LSEG | UNKNOWN | event_date history ≠ knowability |
+| Bloomberg | UNKNOWN / PARTIAL | EVTS calendar; knowability unproven |
+| FactSet | UNKNOWN / PARTIAL | calendar products exist; knowability unproven |
+| NSE | UNKNOWN | announcement timestamps ≠ calendar knowledge-state feed |
+| EODHD | UNKNOWN | control: reportDate ≠ knowledge state |
 
-| Outcome | Meaning |
-|---------|---------|
-| A | One vendor genuinely supports row 15 → use it for Events |
-| B | Special historical events dataset → domain-split Events source |
-| C | Nobody can provide it → revise Event-domain requirements **before** implementation |
+#### Specialist / exploratory (not in main six; not PASS)
 
-Primary row-15 leads: S&P Global Events (PIT from Aug 2018), then LSEG / Bloomberg / FactSet event products with the exact T1 UNKNOWN → T2 KNOWN ask.
+| Vendor | Role | Public fit | India / license |
+|--------|------|------------|-----------------|
+| **EventVestor** | Specialist candidate | 15+ y PIT corporate-event history; Event Date + Trade Date + EV Timestamp; claims backtests never see data before available; earnings-date changes / restatements / filing delays | India/NSE: **UNKNOWN** |
+| **Wall Street Horizon** | Specialist candidate | DateBreaks: prior/current/forecast earnings dates; preliminary announcement dates; revision reasons; PIT history to 2006 | India + availability semantics + license: **UNKNOWN** |
+| **Aiera** | Exploratory | Historical+upcoming calendar; created/modified timestamps; ISIN/RIC/local ticker; international equities | Exact Row-15 knowledge-state semantics: **not established** |
+
+Specialist semantic fit ≠ PASS. Do not add as passing sources without India + availability + license evidence.
+
+#### Outcomes A / B / C (updated)
+
+| Outcome | Status |
+|---------|--------|
+| **A** — Existing vendor solves it | **Potentially yes: S&P Global** (strongest public match among the six) |
+| **B** — Specialist event source | **Potentially yes:** EventVestor, Wall Street Horizon (India unknown) |
+| **C** — Nobody can provide it | **No longer the working assumption** — requirement appears commercially available somewhere; still no usable India-proven source |
+
+Do **not** choose C. Do **not** revise Event-domain requirements yet.
+
+### Next milestone — concrete Row 15 validation (not more generic docs)
+
+**Stop** broad vendor surfing. Validate three targets in order:
+
+```
+1. S&P Global Global Events (Plus)   ← first (already in candidate set)
+2. EventVestor
+3. Wall Street Horizon
+```
+
+For each, ask **only**:
+
+1. Do RELIANCE / HDFCBANK / INFY exist?  
+2. Can we retrieve historical **revisions** to their expected earnings dates?  
+3. Does the record expose historical **delivery/availability** timestamp?  
+4. Can we reconstruct: Sep 1 → UNKNOWN · Sep 5 → KNOWN?  
+5. Historical coverage start for those Indian securities?  
+6. License permits local offline retention?
+
+**Primary next action:** Obtain an actual **S&P Global Events sample for an Indian security** and determine whether PIT **product delivery date** maps losslessly to EOD `available_at`.
 
 ---
 
@@ -258,6 +308,25 @@ Do your financial records expose both the issuer filing/publication timestamp an
 
 ### Row 15
 For historical earnings calendars, can you reconstruct what earnings date was knowable at each historical timestamp, including date changes/revisions? Is there a historical record of when each calendar value became available?
+
+**Knowability + revision case (required for PASS, not merely first appearance):**
+
+```
+as_of = Sep 1  → UNKNOWN
+as_of = Sep 5  → KNOWN
+
+Then revision chain:
+Sep 5:  expected earnings date = Sep 20
+Sep 12: expected earnings date = Sep 22
+Sep 15: expected earnings date = Sep 20
+
+Verify:
+assessment(Sep 10) → Sep 20
+assessment(Sep 13) → Sep 22
+assessment(Sep 16) → Sep 20
+```
+
+This tests **historical knowledge-state reconstruction**, not merely whether the vendor stores historical events.
 
 ### Practical sample request (most valuable) — sharpened gaps
 
@@ -279,11 +348,13 @@ Please provide a small extract for **RELIANCE, HDFCBANK, and/or INFY** (sanitize
 - adjustment factor  
 - revision/update history if any  
 
-**Earnings calendar (row 15)** for at least one date change or first appearance:
+**Earnings calendar (row 15)** for at least one date change or first appearance **and** the revision chain above:
 
-- calendar record as of T1  
+- calendar record as of T1 (UNKNOWN vs KNOWN)  
 - calendar record as of T2  
-- timestamp when the date first appeared or changed  
+- timestamp when the date first appeared or changed (delivery / available_at)  
+- expected-date revisions across Sep 5 / 12 / 15 with assessment checks at Sep 10 / 13 / 16  
+
 
 ### License / local store (row 20)
 Does the proposed subscription permit a private researcher to retain a local historical extract for offline PIT reconstruction and assessment replay (not redistribution)? Please cite the **contract clause** (not website terms of use). Explicitly address: local retention, offline replay, private research, historical extract.
@@ -301,7 +372,7 @@ Does the proposed subscription permit a private researcher to retain a local his
 
 Order reflects PIT-research plausibility + India-native domain role — **not** a quality ranking.
 
-**Do not pay** and **do not start adapters** until **vendor-to-domain mapping** is justified: for each assigned domain, that source’s critical rows for that domain have evidence (sample and/or contract where required). Broad six-candidate public pass is done; **next research is focused Row 15**, not more generic vendor surfing.
+**Do not pay** and **do not start adapters** until **vendor-to-domain mapping** is justified: for each assigned domain, that source’s critical rows for that domain have evidence (sample and/or contract where required). Broad six-candidate public pass is done; Row 15 public focus moved S&P → PASS-candidate. **Next:** S&P Global Events **India sample** (then EventVestor / WSH if needed) — not more generic docs. Do not change engines/specs.
 
 ---
 
@@ -322,7 +393,7 @@ historical knowledge state at as_of
 ```
 
 - CA: “includes announcement date and ex-date” is **not** enough for row 6 PASS.  
-- Events: “historical earnings dates” is **not** enough for row 15 PASS — need reconstructability such as `as_of=Sep 1 → UNKNOWN` and `as_of=Sep 5 → KNOWN` because the calendar entry became available between those points.  
+- Events: “historical earnings dates” is **not** enough for row 15 PASS — need reconstructability such as `as_of=Sep 1 → UNKNOWN` and `as_of=Sep 5 → KNOWN`, **plus** expected-date revision chain (assessment at Sep 10/13/16). Delivery date / EV timestamp must map to knowledge state without inventing EOD timestamps.  
 - Do not rewrite V1 schemas for a vendor.  
 - Do not enable the decision gate.  
 - Do not start adapter code until critical rows clear for the chosen architecture.  
@@ -360,7 +431,11 @@ For each claim that might move a matrix cell, record a row. Sales “yes we supp
 | 2026-10-03 | S&P | 11 | Compustat/CIQ Snapshot retain original+changes; PIT since 1987; NA change-date caveat | public_doc | Compustat + CIQ Financials marketplace pages | unknown | partial | no | no | **11 stays PASS-candidate** |
 | 2026-10-03 | S&P | 12 | FilingDate + Financial Instance Date (first delivered) documented | public_doc | CIQ Financials marketplace; PIT vs lagged fundamentals PDF | unknown | partial (strong model) | no | no | **12 stays PARTIAL (strong model)** |
 | 2026-10-03 | S&P | 6 | Corporate Tracker / CA entity history; feed first-availability unproven | public_doc | Compustat materials | unknown | no | no | no | **6 stays PARTIAL/UNKNOWN** |
-| 2026-10-03 | S&P | 15 | Global Events: history + **PIT from Aug 2018** claimed | public_doc | S&P Global Events marketplace | unknown | partial | no | no | **15 UNKNOWN → PARTIAL → investigate** |
+| 2026-10-03 | S&P | 15 | Global Events: history + **PIT from Aug 2018** claimed | public_doc | S&P Global Events marketplace | unknown | partial | no | no | **15 UNKNOWN → PARTIAL → investigate** (superseded same day by focused pass below) |
+| 2026-10-03 | S&P | 15 | Global Events: past+future (incl. expected earnings); intraday; PIT=Yes; PIT history from Aug 2018 **based on product delivery date** | public_doc | [S&P Global Events marketplace](https://www.marketplace.spglobal.com/en/datasets/global-events-(11)) | unknown | partial → strong (delivery-date PIT; India+granularity open) | no | no | **15 PARTIAL → PASS-candidate** |
+| 2026-10-03 | EventVestor | 15 | 15+ y PIT corporate-event history; Event/Trade/EV Timestamp; backtests never see data early; earnings-date changes | public_doc | EventVestor product materials | unknown | strong semantic; India unproven | no | no | Specialist candidate — **not** main-matrix PASS |
+| 2026-10-03 | Wall Street Horizon | 15 | DateBreaks: prior/current/forecast + preliminary dates; revision reasons; PIT to 2006 | public_doc | Wall Street Horizon DateBreaks materials | unknown | strong semantic; India/license unproven | no | no | Specialist candidate — **not** main-matrix PASS |
+| 2026-10-03 | Aiera | 15 | Historical+upcoming; created/modified timestamps; ISIN/RIC/local ticker; international | public_doc / dev_doc | Aiera API / calendar docs | unknown | exploratory — knowledge-state semantics not established | no | no | Exploratory only |
 | 2026-10-03 | S&P | 20 | Xpressfeed loads to customer DB (technical); order license required | public_doc | Xpressfeed Loader / brochure; S&P license T&Cs | unknown | n/a | no | no | **20 stays UNKNOWN** |
 | 2026-10-03 | Bloomberg | 11 | COFI PIT historical actuals / as-reported; 100k+ names; Data License | public_doc | bloomberg.com/professional COFI + investment-research catalog | unknown | partial | no | no | **11 stays PARTIAL → investigate** |
 | 2026-10-03 | Bloomberg | 12 | Accurate timestamps advertised | public_doc | Bloomberg research-data product pages | unknown | partial | no | no | **12 stays PARTIAL → investigate** |
@@ -386,20 +461,22 @@ For each claim that might move a matrix cell, record a row. Sales “yes we supp
 
 Do not send credentials/API keys/confidential contracts into chat — sanitized sample + clause wording only.
 
-### Critical-row summary (all six candidates — public pass complete)
+### Critical-row summary (after Row 15 focused pass)
 
 ```
            LSEG              S&P                 Bloomberg           FactSet            NSE                EODHD
 6          PARTIAL/UNKNOWN   PARTIAL/UNKNOWN     UNKNOWN/PARTIAL     UNKNOWN            PARTIAL            UNKNOWN
 11         PASS-candidate    PASS-candidate†     PARTIAL→invest      PASS-candidate     UNKNOWN            UNKNOWN
 12         PARTIAL           PARTIAL (strong)    PARTIAL→invest      PARTIAL (strong)   PARTIAL (strong)   PARTIAL/UNKNOWN
-15         UNKNOWN           PARTIAL→invest§     UNKNOWN/PARTIAL     UNKNOWN/PARTIAL    UNKNOWN            UNKNOWN
+15         UNKNOWN           PASS-candidate§     UNKNOWN/PARTIAL     UNKNOWN/PARTIAL    UNKNOWN            UNKNOWN
 20         UNKNOWN           UNKNOWN             UNKNOWN             UNKNOWN            UNKNOWN (offline)  PASS-candidate
 
 PASS (any vendor, critical)     0
 ```
 
-**Next:** Focused **Row 15** investigation (calendar knowability), not more broad vendor docs.
+**Row 15 side board:** EventVestor (specialist) · Wall Street Horizon (specialist) · Aiera (exploratory) — none PASS.
+
+**Next:** S&P Global Events **India sample** + delivery-date → EOD `available_at` map (+ revision chain). Then EventVestor / WSH if S&P fails India/granularity.
 
 ---
 
@@ -415,6 +492,7 @@ PASS (any vendor, critical)     0
 | 2026-10-03 | Bloomberg public-doc pass; no cell → PASS | Pattern: PIT fundamentals promising; CA/event knowability unresolved |
 | 2026-10-03 | FactSet public-doc pass; row 11 → PASS-candidate | APAC PIT since 1999; Estimates PIT excluded |
 | 2026-10-03 | NSE + EODHD public passes; six-candidate Track 1 complete | NSE 12 PARTIAL(strong); EODHD 20 PASS-candidate; **next = focused Row 15** |
+| 2026-10-03 | Row 15 focused pass: S&P Global Events → **PASS-candidate** | Delivery-date PIT (Aug 2018+); C no longer working assumption; specialists noted; **next = India sample**; engines/specs unchanged |
 
 ## Next engineering gate (still future)
 

@@ -151,4 +151,5 @@ Record the go / no-go here when the matrix is complete:
 | 2026-10-03 | Gate = vendor-to-domain mapping; S&P public pass | S&P | Row 15 → PARTIAL→investigate; 11/12 caveats recorded |
 | 2026-10-03 | Bloomberg + FactSet public passes | Bloomberg, FactSet | FactSet 11 → PASS-candidate; knowledge-state CA/events still open |
 | 2026-10-03 | NSE + EODHD public passes; broad Track 1 done | NSE, EODHD | NSE 12 PARTIAL(strong); EODHD 20 PASS-candidate; next focused Row 15 — see VENDOR_AUDIT_LIVE |
+| 2026-10-03 | Row 15 focused: S&P → PASS-candidate; do not weaken row 15 | S&P (+ EventVestor / WSH / Aiera side board) | Global Events delivery-date PIT; India sample next; PASS still 0; no adapter/engine change |
 | | | | |
